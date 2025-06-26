@@ -1,0 +1,981 @@
+				@font-face {
+					font-family: 'roseritta';
+					src: url('/wp-content/uploads/useanyfont/2019Roseritta.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2019Roseritta.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.roseritta{font-family: 'roseritta' !important;}
+
+						@font-face {
+					font-family: 'bloverly';
+					src: url('/wp-content/uploads/useanyfont/1598bloverly.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1598bloverly.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.bloverly{font-family: 'bloverly' !important;}
+
+						@font-face {
+					font-family: 'monoline-signature';
+					src: url('/wp-content/uploads/useanyfont/4035Monoline-signature.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4035Monoline-signature.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.monoline-signature{font-family: 'monoline-signature' !important;}
+
+						@font-face {
+					font-family: 'signatie';
+					src: url('/wp-content/uploads/useanyfont/8671Signatie.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8671Signatie.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.signatie{font-family: 'signatie' !important;}
+
+						@font-face {
+					font-family: 'santillana-daughter';
+					src: url('/wp-content/uploads/useanyfont/3687Santillana-Daughter.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3687Santillana-Daughter.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.santillana-daughter{font-family: 'santillana-daughter' !important;}
+
+						@font-face {
+					font-family: 'retrosignature';
+					src: url('/wp-content/uploads/useanyfont/7296Retrosignature.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7296Retrosignature.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.retrosignature{font-family: 'retrosignature' !important;}
+
+						@font-face {
+					font-family: 'le-jour-script';
+					src: url('/wp-content/uploads/useanyfont/9617Le-Jour-Script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9617Le-Jour-Script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.le-jour-script{font-family: 'le-jour-script' !important;}
+
+						@font-face {
+					font-family: 'gistesy';
+					src: url('/wp-content/uploads/useanyfont/1154Gistesy.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1154Gistesy.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.gistesy{font-family: 'gistesy' !important;}
+
+						@font-face {
+					font-family: 'boheme-floral';
+					src: url('/wp-content/uploads/useanyfont/5674Boheme-floral.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5674Boheme-floral.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.boheme-floral{font-family: 'boheme-floral' !important;}
+
+						@font-face {
+					font-family: 'biancha';
+					src: url('/wp-content/uploads/useanyfont/9507Biancha.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9507Biancha.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.biancha{font-family: 'biancha' !important;}
+
+						@font-face {
+					font-family: 'monday-rain';
+					src: url('/wp-content/uploads/useanyfont/6246Monday-rain.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6246Monday-rain.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.monday-rain{font-family: 'monday-rain' !important;}
+
+						@font-face {
+					font-family: 'authentic-signature';
+					src: url('/wp-content/uploads/useanyfont/3793Authentic-Signature.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3793Authentic-Signature.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.authentic-signature{font-family: 'authentic-signature' !important;}
+
+						@font-face {
+					font-family: 'minionpro-italic';
+					src: url('/wp-content/uploads/useanyfont/6621Minionpro-italic.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6621Minionpro-italic.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.minionpro-italic{font-family: 'minionpro-italic' !important;}
+
+						@font-face {
+					font-family: 'braille';
+					src: url('/wp-content/uploads/useanyfont/7821BRAILLE.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.braille{font-family: 'braille' !important;}
+
+						@font-face {
+					font-family: 'baretta';
+					src: url('/wp-content/uploads/useanyfont/1798baretta.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1798baretta.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.baretta{font-family: 'baretta' !important;}
+
+						@font-face {
+					font-family: 'established-serif';
+					src: url('/wp-content/uploads/useanyfont/9822established-serif.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9822established-serif.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.established-serif{font-family: 'established-serif' !important;}
+
+						@font-face {
+					font-family: 'astoria-classic-med';
+					src: url('/wp-content/uploads/useanyfont/6084Astoria-classic-med.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6084Astoria-classic-med.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.astoria-classic-med{font-family: 'astoria-classic-med' !important;}
+
+						@font-face {
+					font-family: 'charlotte';
+					src: url('/wp-content/uploads/useanyfont/7850charlotte.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7850charlotte.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.charlotte{font-family: 'charlotte' !important;}
+
+						@font-face {
+					font-family: 'astoriaclassic-light';
+					src: url('/wp-content/uploads/useanyfont/222Astoriaclassic-light.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/222Astoriaclassic-light.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.astoriaclassic-light{font-family: 'astoriaclassic-light' !important;}
+
+						@font-face {
+					font-family: 'annabel-antique';
+					src: url('/wp-content/uploads/useanyfont/83Annabel-antique.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/83Annabel-antique.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.annabel-antique{font-family: 'annabel-antique' !important;}
+
+						@font-face {
+					font-family: 'moscato-script';
+					src: url('/wp-content/uploads/useanyfont/1054Moscato-Script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1054Moscato-Script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.moscato-script{font-family: 'moscato-script' !important;}
+
+						@font-face {
+					font-family: 'new-york';
+					src: url('/wp-content/uploads/useanyfont/3473New-york.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3473New-york.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.new-york{font-family: 'new-york' !important;}
+
+						@font-face {
+					font-family: 'westbourne-serif-ita';
+					src: url('/wp-content/uploads/useanyfont/7683Westbourne-serif-ita.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7683Westbourne-serif-ita.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.westbourne-serif-ita{font-family: 'westbourne-serif-ita' !important;}
+
+						@font-face {
+					font-family: 'dagtton-al86g';
+					src: url('/wp-content/uploads/useanyfont/1102Dagtton-AL86g.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1102Dagtton-AL86g.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.dagtton-al86g{font-family: 'dagtton-al86g' !important;}
+
+						@font-face {
+					font-family: 'westbourne-serif-reg';
+					src: url('/wp-content/uploads/useanyfont/7097Westbourne-serif-reg.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7097Westbourne-serif-reg.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.westbourne-serif-reg{font-family: 'westbourne-serif-reg' !important;}
+
+						@font-face {
+					font-family: 'letter-magic';
+					src: url('/wp-content/uploads/useanyfont/4071Letter-Magic.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4071Letter-Magic.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.letter-magic{font-family: 'letter-magic' !important;}
+
+						@font-face {
+					font-family: 'aston-script';
+					src: url('/wp-content/uploads/useanyfont/2673Aston-Script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2673Aston-Script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.aston-script{font-family: 'aston-script' !important;}
+
+						@font-face {
+					font-family: 'brunella-script';
+					src: url('/wp-content/uploads/useanyfont/9080Brunella-Script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9080Brunella-Script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.brunella-script{font-family: 'brunella-script' !important;}
+
+						@font-face {
+					font-family: 'moritza-script';
+					src: url('/wp-content/uploads/useanyfont/1756Moritza-script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1756Moritza-script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.moritza-script{font-family: 'moritza-script' !important;}
+
+						@font-face {
+					font-family: 'manstein';
+					src: url('/wp-content/uploads/useanyfont/2917Manstein.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2917Manstein.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.manstein{font-family: 'manstein' !important;}
+
+						@font-face {
+					font-family: 'friendlist';
+					src: url('/wp-content/uploads/useanyfont/3473Friendlist.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3473Friendlist.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.friendlist{font-family: 'friendlist' !important;}
+
+						@font-face {
+					font-family: 'almara';
+					src: url('/wp-content/uploads/useanyfont/1567Almara.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1567Almara.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.almara{font-family: 'almara' !important;}
+
+						@font-face {
+					font-family: 'helmwick-regular';
+					src: url('/wp-content/uploads/useanyfont/9133Helmwick-regular.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9133Helmwick-regular.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.helmwick-regular{font-family: 'helmwick-regular' !important;}
+
+						@font-face {
+					font-family: 'rondal';
+					src: url('/wp-content/uploads/useanyfont/4258Rondal.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4258Rondal.woff') format('woff');
+					font-weight: 400; font-style: normal; font-display: auto;
+				}
+
+				.rondal{font-family: 'rondal' !important;}
+
+						@font-face {
+					font-family: 'rondal';
+					src: url('/wp-content/uploads/useanyfont/6924Rondal.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6924Rondal.woff') format('woff');
+					font-weight: 700; font-style: normal; font-display: auto;
+				}
+
+				.rondal{font-family: 'rondal' !important;}
+
+						@font-face {
+					font-family: 'rondal';
+					src: url('/wp-content/uploads/useanyfont/2619Rondal.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2619Rondal.woff') format('woff');
+					font-weight: 600; font-style: normal; font-display: auto;
+				}
+
+				.rondal{font-family: 'rondal' !important;}
+
+						@font-face {
+					font-family: 'bailenson';
+					src: url('/wp-content/uploads/useanyfont/9578bailenson.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9578bailenson.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.bailenson{font-family: 'bailenson' !important;}
+
+						@font-face {
+					font-family: 'andalucia';
+					src: url('/wp-content/uploads/useanyfont/9979Andalucia.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9979Andalucia.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.andalucia{font-family: 'andalucia' !important;}
+
+						@font-face {
+					font-family: 'peristiwa';
+					src: url('/wp-content/uploads/useanyfont/3009Peristiwa.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3009Peristiwa.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.peristiwa{font-family: 'peristiwa' !important;}
+
+						@font-face {
+					font-family: 'snell-roundhand';
+					src: url('/wp-content/uploads/useanyfont/2948Snell-Roundhand.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2948Snell-Roundhand.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.snell-roundhand{font-family: 'snell-roundhand' !important;}
+
+						@font-face {
+					font-family: 'dargelania';
+					src: url('/wp-content/uploads/useanyfont/952Dargelania.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/952Dargelania.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.dargelania{font-family: 'dargelania' !important;}
+
+						@font-face {
+					font-family: 'tan-pearl';
+					src: url('/wp-content/uploads/useanyfont/874Tan-Pearl.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/874Tan-Pearl.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.tan-pearl{font-family: 'tan-pearl' !important;}
+
+						@font-face {
+					font-family: 'flowrise';
+					src: url('/wp-content/uploads/useanyfont/7190FLOWRISE.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7190FLOWRISE.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.flowrise{font-family: 'flowrise' !important;}
+
+						@font-face {
+					font-family: 'nostalgia-script';
+					src: url('/wp-content/uploads/useanyfont/7229Nostalgia-Script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7229Nostalgia-Script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.nostalgia-script{font-family: 'nostalgia-script' !important;}
+
+						@font-face {
+					font-family: 'sloop-script';
+					src: url('/wp-content/uploads/useanyfont/7069sloop-script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7069sloop-script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.sloop-script{font-family: 'sloop-script' !important;}
+
+						@font-face {
+					font-family: 'gardena-holmes-serif';
+					src: url('/wp-content/uploads/useanyfont/6183Gardena-Holmes-Serif.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6183Gardena-Holmes-Serif.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.gardena-holmes-serif{font-family: 'gardena-holmes-serif' !important;}
+
+						@font-face {
+					font-family: 'gardenaholmes-script';
+					src: url('/wp-content/uploads/useanyfont/8284GardenaHolmes-Script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8284GardenaHolmes-Script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.gardenaholmes-script{font-family: 'gardenaholmes-script' !important;}
+
+						@font-face {
+					font-family: 'menobanner';
+					src: url('/wp-content/uploads/useanyfont/8546MenoBanner.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8546MenoBanner.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.menobanner{font-family: 'menobanner' !important;}
+
+						@font-face {
+					font-family: 'whitegardenwide';
+					src: url('/wp-content/uploads/useanyfont/5726WhiteGardenWide.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5726WhiteGardenWide.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.whitegardenwide{font-family: 'whitegardenwide' !important;}
+
+						@font-face {
+					font-family: 'adelia';
+					src: url('/wp-content/uploads/useanyfont/5177ADELIA.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5177ADELIA.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.adelia{font-family: 'adelia' !important;}
+
+						@font-face {
+					font-family: 'cac-champagne';
+					src: url('/wp-content/uploads/useanyfont/6021cac-champagne.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6021cac-champagne.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.cac-champagne{font-family: 'cac-champagne' !important;}
+
+						@font-face {
+					font-family: 'instrumentserif';
+					src: url('/wp-content/uploads/useanyfont/2InstrumentSerif.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2InstrumentSerif.woff') format('woff');
+					font-weight: 400; font-style: normal; font-display: auto;
+				}
+
+				.instrumentserif{font-family: 'instrumentserif' !important;}
+
+						@font-face {
+					font-family: 'instrumentserif';
+					src: url('/wp-content/uploads/useanyfont/3820InstrumentSerif.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3820InstrumentSerif.woff') format('woff');
+					font-weight: 400; font-style: italic; font-display: auto;
+				}
+
+				.instrumentserif{font-family: 'instrumentserif' !important;}
+
+						@font-face {
+					font-family: 'england';
+					src: url('/wp-content/uploads/useanyfont/2743England.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2743England.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.england{font-family: 'england' !important;}
+
+						@font-face {
+					font-family: 'optimaltpro-roman';
+					src: url('/wp-content/uploads/useanyfont/119OptimaLTPro-Roman.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/119OptimaLTPro-Roman.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.optimaltpro-roman{font-family: 'optimaltpro-roman' !important;}
+
+						@font-face {
+					font-family: 'westering';
+					src: url('/wp-content/uploads/useanyfont/6601Westering.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6601Westering.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.westering{font-family: 'westering' !important;}
+
+						@font-face {
+					font-family: 'westring-4bazl';
+					src: url('/wp-content/uploads/useanyfont/9964Westring-4BAZl.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9964Westring-4BAZl.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.westring-4bazl{font-family: 'westring-4bazl' !important;}
+
+						@font-face {
+					font-family: 'hugolers-stylish';
+					src: url('/wp-content/uploads/useanyfont/7088Hugolers-Stylish.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7088Hugolers-Stylish.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.hugolers-stylish{font-family: 'hugolers-stylish' !important;}
+
+						@font-face {
+					font-family: 'glinka';
+					src: url('/wp-content/uploads/useanyfont/2189Glinka.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2189Glinka.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.glinka{font-family: 'glinka' !important;}
+
+						@font-face {
+					font-family: 'reliesta';
+					src: url('/wp-content/uploads/useanyfont/1908Reliesta.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1908Reliesta.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.reliesta{font-family: 'reliesta' !important;}
+
+						@font-face {
+					font-family: 'betterauthentic';
+					src: url('/wp-content/uploads/useanyfont/5594BetterAuthentic.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5594BetterAuthentic.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.betterauthentic{font-family: 'betterauthentic' !important;}
+
+						@font-face {
+					font-family: 'calistha';
+					src: url('/wp-content/uploads/useanyfont/6298calistha.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6298calistha.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.calistha{font-family: 'calistha' !important;}
+
+						@font-face {
+					font-family: 'sunshine-orange';
+					src: url('/wp-content/uploads/useanyfont/4554sunshine-orange.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4554sunshine-orange.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.sunshine-orange{font-family: 'sunshine-orange' !important;}
+
+						@font-face {
+					font-family: 'romantic-serif';
+					src: url('/wp-content/uploads/useanyfont/247Romantic-Serif.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/247Romantic-Serif.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.romantic-serif{font-family: 'romantic-serif' !important;}
+
+						@font-face {
+					font-family: 'exmouth';
+					src: url('/wp-content/uploads/useanyfont/4046exmouth.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4046exmouth.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.exmouth{font-family: 'exmouth' !important;}
+
+						@font-face {
+					font-family: 'bricktown';
+					src: url('/wp-content/uploads/useanyfont/3316Bricktown.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3316Bricktown.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.bricktown{font-family: 'bricktown' !important;}
+
+						@font-face {
+					font-family: 'rihena';
+					src: url('/wp-content/uploads/useanyfont/7732Rihena.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7732Rihena.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.rihena{font-family: 'rihena' !important;}
+
+						@font-face {
+					font-family: 'brittany-signature';
+					src: url('/wp-content/uploads/useanyfont/4116Brittany-Signature.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4116Brittany-Signature.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.brittany-signature{font-family: 'brittany-signature' !important;}
+
+						@font-face {
+					font-family: 'la-fleur-grande';
+					src: url('/wp-content/uploads/useanyfont/1680la-fleur-grande.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1680la-fleur-grande.woff') format('woff');
+					font-weight: 400; font-style: normal; font-display: auto;
+				}
+
+				.la-fleur-grande{font-family: 'la-fleur-grande' !important;}
+
+						@font-face {
+					font-family: 'herova';
+					src: url('/wp-content/uploads/useanyfont/5639Herova.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5639Herova.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.herova{font-family: 'herova' !important;}
+
+						@font-face {
+					font-family: 'bookman-old-style';
+					src: url('/wp-content/uploads/useanyfont/7637Bookman-Old-Style.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7637Bookman-Old-Style.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.bookman-old-style{font-family: 'bookman-old-style' !important;}
+
+						@font-face {
+					font-family: 'heatwood';
+					src: url('/wp-content/uploads/useanyfont/5255Heatwood.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5255Heatwood.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.heatwood{font-family: 'heatwood' !important;}
+
+						@font-face {
+					font-family: 'crimson-pro';
+					src: url('/wp-content/uploads/useanyfont/3458Crimson-Pro.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3458Crimson-Pro.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.crimson-pro{font-family: 'crimson-pro' !important;}
+
+						@font-face {
+					font-family: 'ivy-mode';
+					src: url('/wp-content/uploads/useanyfont/1185Ivy-Mode.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1185Ivy-Mode.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.ivy-mode{font-family: 'ivy-mode' !important;}
+
+						@font-face {
+					font-family: 'la-obrige';
+					src: url('/wp-content/uploads/useanyfont/2038La-Obrige.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2038La-Obrige.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.la-obrige{font-family: 'la-obrige' !important;}
+
+						@font-face {
+					font-family: 'gyahegi';
+					src: url('/wp-content/uploads/useanyfont/8679Gyahegi.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8679Gyahegi.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.gyahegi{font-family: 'gyahegi' !important;}
+
+						@font-face {
+					font-family: 'oleragie';
+					src: url('/wp-content/uploads/useanyfont/7432Oleragie.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7432Oleragie.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.oleragie{font-family: 'oleragie' !important;}
+
+						@font-face {
+					font-family: 'bakpia-sabang';
+					src: url('/wp-content/uploads/useanyfont/9729Bakpia-Sabang.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/9729Bakpia-Sabang.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.bakpia-sabang{font-family: 'bakpia-sabang' !important;}
+
+						@font-face {
+					font-family: 'boldest-romance';
+					src: url('/wp-content/uploads/useanyfont/3876Boldest-Romance.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3876Boldest-Romance.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.boldest-romance{font-family: 'boldest-romance' !important;}
+
+						@font-face {
+					font-family: 'embassy-bt-regular';
+					src: url('/wp-content/uploads/useanyfont/8726Embassy-bt-regular.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8726Embassy-bt-regular.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.embassy-bt-regular{font-family: 'embassy-bt-regular' !important;}
+
+						@font-face {
+					font-family: 'gotham-bold';
+					src: url('/wp-content/uploads/useanyfont/7466Gotham-Bold.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7466Gotham-Bold.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.gotham-bold{font-family: 'gotham-bold' !important;}
+
+						@font-face {
+					font-family: 'dancing-script';
+					src: url('/wp-content/uploads/useanyfont/5972Dancing-Script.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5972Dancing-Script.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.dancing-script{font-family: 'dancing-script' !important;}
+
+						@font-face {
+					font-family: 'brittany-signature';
+					src: url('/wp-content/uploads/useanyfont/3188Brittany-Signature.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3188Brittany-Signature.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.brittany-signature{font-family: 'brittany-signature' !important;}
+
+						@font-face {
+					font-family: 'gotham-pro';
+					src: url('/wp-content/uploads/useanyfont/1607gotham-pro.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1607gotham-pro.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.gotham-pro{font-family: 'gotham-pro' !important;}
+
+						@font-face {
+					font-family: 'myriad-pro';
+					src: url('/wp-content/uploads/useanyfont/6872Myriad-pro.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6872Myriad-pro.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.myriad-pro{font-family: 'myriad-pro' !important;}
+
+						@font-face {
+					font-family: 'sunroll';
+					src: url('/wp-content/uploads/useanyfont/3454Sunroll.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3454Sunroll.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.sunroll{font-family: 'sunroll' !important;}
+
+						@font-face {
+					font-family: 'beautiquedisplay-reg';
+					src: url('/wp-content/uploads/useanyfont/7849BeautiqueDisplay-Reg.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7849BeautiqueDisplay-Reg.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.beautiquedisplay-reg{font-family: 'beautiquedisplay-reg' !important;}
+
+						@font-face {
+					font-family: 'marie-vaery';
+					src: url('/wp-content/uploads/useanyfont/1388Marie-Vaery.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1388Marie-Vaery.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.marie-vaery{font-family: 'marie-vaery' !important;}
+
+						@font-face {
+					font-family: 'belights';
+					src: url('/wp-content/uploads/useanyfont/893Belights.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/893Belights.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.belights{font-family: 'belights' !important;}
+
+						@font-face {
+					font-family: 'lusican';
+					src: url('/wp-content/uploads/useanyfont/2233Lusican.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2233Lusican.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.lusican{font-family: 'lusican' !important;}
+
+						@font-face {
+					font-family: 'katrine';
+					src: url('/wp-content/uploads/useanyfont/668Katrine.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/668Katrine.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.katrine{font-family: 'katrine' !important;}
+
+						@font-face {
+					font-family: 'sunflower';
+					src: url('/wp-content/uploads/useanyfont/6706Sunflower.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/6706Sunflower.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.sunflower{font-family: 'sunflower' !important;}
+
+						@font-face {
+					font-family: 'rosalia';
+					src: url('/wp-content/uploads/useanyfont/8510rosalia.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8510rosalia.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.rosalia{font-family: 'rosalia' !important;}
+
+						@font-face {
+					font-family: 'grand-amoura-demo';
+					src: url('/wp-content/uploads/useanyfont/3516Grand-Amoura-Demo.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3516Grand-Amoura-Demo.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.grand-amoura-demo{font-family: 'grand-amoura-demo' !important;}
+
+						@font-face {
+					font-family: 'lunery';
+					src: url('/wp-content/uploads/useanyfont/7269LUNERY.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7269LUNERY.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.lunery{font-family: 'lunery' !important;}
+
+						@font-face {
+					font-family: 'equila';
+					src: url('/wp-content/uploads/useanyfont/8314EQUILA.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8314EQUILA.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.equila{font-family: 'equila' !important;}
+
+						@font-face {
+					font-family: 'bowtaris';
+					src: url('/wp-content/uploads/useanyfont/5131Bowtaris.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5131Bowtaris.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.bowtaris{font-family: 'bowtaris' !important;}
+
+						@font-face {
+					font-family: 'last-chritmas';
+					src: url('/wp-content/uploads/useanyfont/5514Last-Chritmas.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5514Last-Chritmas.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.last-chritmas{font-family: 'last-chritmas' !important;}
+
+						@font-face {
+					font-family: 'melon';
+					src: url('/wp-content/uploads/useanyfont/2526melon.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2526melon.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.melon{font-family: 'melon' !important;}
+
+						@font-face {
+					font-family: 'panda';
+					src: url('/wp-content/uploads/useanyfont/1032Panda.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1032Panda.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.panda{font-family: 'panda' !important;}
+
+						@font-face {
+					font-family: 'pisang';
+					src: url('/wp-content/uploads/useanyfont/8786Pisang.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/8786Pisang.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.pisang{font-family: 'pisang' !important;}
+
+						@font-face {
+					font-family: 'billamount';
+					src: url('/wp-content/uploads/useanyfont/3447BillaMount.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3447BillaMount.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.billamount{font-family: 'billamount' !important;}
+
+						@font-face {
+					font-family: 'apel';
+					src: url('/wp-content/uploads/useanyfont/2049Apel.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/2049Apel.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.apel{font-family: 'apel' !important;}
+
+						@font-face {
+					font-family: 'blimbing';
+					src: url('/wp-content/uploads/useanyfont/7046Blimbing.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7046Blimbing.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.blimbing{font-family: 'blimbing' !important;}
+
+						@font-face {
+					font-family: 'nangka';
+					src: url('/wp-content/uploads/useanyfont/5966Nangka.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5966Nangka.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.nangka{font-family: 'nangka' !important;}
+
+						@font-face {
+					font-family: 'valentino';
+					src: url('/wp-content/uploads/useanyfont/3624Valentino.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3624Valentino.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.valentino{font-family: 'valentino' !important;}
+
+						@font-face {
+					font-family: 'recoleta';
+					src: url('/wp-content/uploads/useanyfont/4482Recoleta.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4482Recoleta.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.recoleta{font-family: 'recoleta' !important;}
+
+						@font-face {
+					font-family: 'avielire';
+					src: url('/wp-content/uploads/useanyfont/3028avielire.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/3028avielire.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.avielire{font-family: 'avielire' !important;}
+
+						@font-face {
+					font-family: 'elizabeth';
+					src: url('/wp-content/uploads/useanyfont/1883elizabeth.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/1883elizabeth.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.elizabeth{font-family: 'elizabeth' !important;}
+
+		
