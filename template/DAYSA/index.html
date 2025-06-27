@@ -5648,31 +5648,38 @@
       checkBrowser();
     </script>
 
-    <script>
-      window.addEventListener("message", (e) => {
-        console.log("Received message from iframe:", e.data);
-        if (e.origin !== "https://lucknoob.github.io") return;
-        const { user, token } = e.data;
-        document.body.innerText = `User: ${user}, Token: ${token}`;
-      });
-    </script>
+  <script>
+    // 1️⃣ Pesan dari iframe
+    window.addEventListener("message", (e) => {
+      console.log("Received message from iframe:", e.data);
 
-    <script>
-      // Manual initialization - tambahkan setelah class definition
-      document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(function () {
-          console.log("Manual init starting...");
-          const container = document.querySelector(".snap-scroll-gc-container");
-          if (container) {
-            new ModernSnapScrollGC(container, {
-              scrollDuration: 800,
-              enableDots: true,
-              enableTouch: true,
-            });
-          }
-        }, 1000); // Delay 1 detik
-      });
-    </script>
+      // Validasi asal dan struktur data
+      if (e.origin !== "https://lucknoob.github.io") return;
+      if (!e.data || typeof e.data !== "object") return;
+      const { user, token } = e.data;
+      if (!user || !token) return;
+
+      // Tampilkan hasil
+      document.body.innerText += `\nUser: ${user}, Token: ${token}`;
+    });
+
+    // 2️⃣ Inisialisasi ModernSnapScrollGC setelah DOM siap
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        console.log("Manual init starting...");
+        const container = document.querySelector(".snap-scroll-gc-container");
+        if (container && typeof ModernSnapScrollGC === "function") {
+          new ModernSnapScrollGC(container, {
+            scrollDuration: 800,
+            enableDots: true,
+            enableTouch: true,
+          });
+        } else {
+          console.warn("ModernSnapScrollGC not found or container missing");
+        }
+      }, 1000); // Delay 1 detik
+    });
+  </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
