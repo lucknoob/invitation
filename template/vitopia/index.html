@@ -1,0 +1,2922 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title inertia>Vitopia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+      media="all"
+      onload="this.onload=null;this.media='all';"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+    /></noscript>
+
+    <script type="text/javascript">
+      const Ziggy = {
+        url: "https:\/\/vitopia.co",
+        port: null,
+        defaults: {},
+        routes: {
+          "websites.subdomain.show": {
+            uri: "\/",
+            methods: ["GET", "HEAD"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website"],
+          },
+          "websites.subdomain.unlock": {
+            uri: "websites\/unlock",
+            methods: ["POST"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website"],
+          },
+          store: {
+            uri: "guests\/{website}",
+            methods: ["POST"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website", "website"],
+          },
+          "rsvp.subdomain.groups.search": {
+            uri: "rsvp\/search-groups\/{website}",
+            methods: ["GET", "HEAD"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website", "website"],
+          },
+          "rsvp.subdomain.groups.events": {
+            uri: "rsvp\/events\/{website}\/{guestGroup}",
+            methods: ["GET", "HEAD"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website", "website", "guestGroup"],
+          },
+          "rsvp.subdomain.groups.confirm": {
+            uri: "rsvp\/confirm\/{website}",
+            methods: ["POST"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website", "website"],
+          },
+          "comments.subdomain.index": {
+            uri: "website-comments\/{website}",
+            methods: ["GET", "HEAD"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website", "website"],
+          },
+          "comments.subdomain.store": {
+            uri: "website-comments\/{website}",
+            methods: ["POST"],
+            domain: "{website}.vitopia.co",
+            parameters: ["website", "website"],
+          },
+          setlocale: { uri: "setlocale", methods: ["POST"] },
+          pricing: { uri: "pricing", methods: ["GET", "HEAD"] },
+          home: {
+            uri: "{country}",
+            methods: ["GET", "HEAD"],
+            wheres: { country: "[a-zA-Z]{2}" },
+            parameters: ["country"],
+          },
+          "pricing.country": {
+            uri: "{country}\/pricing",
+            methods: ["GET", "HEAD"],
+            wheres: { country: "[a-zA-Z]{2}" },
+            parameters: ["country"],
+          },
+          dashboard: { uri: "dashboard", methods: ["GET", "HEAD"] },
+          register: { uri: "register", methods: ["GET", "HEAD"] },
+          login: { uri: "login", methods: ["GET", "HEAD"] },
+          "password.request": {
+            uri: "forgot-password",
+            methods: ["GET", "HEAD"],
+          },
+          "password.email": { uri: "forgot-password", methods: ["POST"] },
+          "password.reset": {
+            uri: "reset-password\/{token}",
+            methods: ["GET", "HEAD"],
+            parameters: ["token"],
+          },
+          "password.store": { uri: "reset-password", methods: ["POST"] },
+          "verification.notice": {
+            uri: "verify-email",
+            methods: ["GET", "HEAD"],
+          },
+          "verification.verify": {
+            uri: "verify-email\/{id}\/{hash}",
+            methods: ["GET", "HEAD"],
+            parameters: ["id", "hash"],
+          },
+          "verification.send": {
+            uri: "email\/verification-notification",
+            methods: ["POST"],
+          },
+          "password.confirm": {
+            uri: "confirm-password",
+            methods: ["GET", "HEAD"],
+          },
+          logout: { uri: "logout", methods: ["POST"] },
+          "checkout.form": { uri: "checkout", methods: ["GET", "HEAD"] },
+          "checkout.process": { uri: "checkout", methods: ["POST"] },
+          "checkout.package": { uri: "checkout\/package", methods: ["POST"] },
+          "checkout.template": { uri: "checkout\/template", methods: ["POST"] },
+          "upgrade.checkout": { uri: "upgrade\/checkout", methods: ["POST"] },
+          "templates.index": { uri: "templates", methods: ["GET", "HEAD"] },
+          "templates.store": { uri: "templates", methods: ["POST"] },
+          "templates.update": {
+            uri: "templates\/{template}",
+            methods: ["PATCH"],
+            parameters: ["template"],
+          },
+          "templates.update-settings": {
+            uri: "templates\/{template}\/settings",
+            methods: ["PATCH"],
+            parameters: ["template"],
+          },
+          "templates.upload-featured-image": {
+            uri: "templates\/featured-image\/{template}",
+            methods: ["POST"],
+            parameters: ["template"],
+          },
+          "templates.upload-asset": {
+            uri: "templates\/upload-asset\/{template}",
+            methods: ["POST"],
+            parameters: ["template"],
+          },
+          "templates.info": {
+            uri: "templates\/{template}\/info",
+            methods: ["GET", "HEAD"],
+            parameters: ["template"],
+          },
+          "templates.seo": {
+            uri: "templates\/{template}\/seo",
+            methods: ["GET", "HEAD"],
+            parameters: ["template"],
+          },
+          "templates.config": {
+            uri: "templates\/{template}\/config",
+            methods: ["GET", "HEAD"],
+            parameters: ["template"],
+          },
+          "templates.settings": {
+            uri: "templates\/{template}\/settings",
+            methods: ["GET", "HEAD"],
+            parameters: ["template"],
+          },
+          "templates.design": {
+            uri: "templates\/{template}\/design",
+            methods: ["GET", "HEAD"],
+            parameters: ["template"],
+          },
+          "templates.updateTemplatePackage": {
+            uri: "templates\/template-package",
+            methods: ["PUT"],
+          },
+          "templates.show": {
+            uri: "templates\/{template}",
+            methods: ["GET", "HEAD"],
+            parameters: ["template"],
+          },
+          "templates.preview": {
+            uri: "templates\/preview\/{template}",
+            methods: ["GET", "HEAD"],
+            parameters: ["template"],
+          },
+          "pages.returnPolicy": {
+            uri: "return-and-refund-policy",
+            methods: ["GET", "HEAD"],
+          },
+          "pages.privacyPolicy": {
+            uri: "privacy-policy",
+            methods: ["GET", "HEAD"],
+          },
+          "pages.termsOfService": {
+            uri: "terms-of-service",
+            methods: ["GET", "HEAD"],
+          },
+          "pages.about": { uri: "about", methods: ["GET", "HEAD"] },
+          "pages.contact": { uri: "contact", methods: ["GET", "HEAD"] },
+          "pages.faq": { uri: "faq", methods: ["GET", "HEAD"] },
+          "profile.edit": {
+            uri: "settings\/profile",
+            methods: ["GET", "HEAD"],
+          },
+          "profile.update": { uri: "settings\/profile", methods: ["PATCH"] },
+          "profile.destroy": { uri: "settings\/profile", methods: ["DELETE"] },
+          "password.edit": {
+            uri: "settings\/password",
+            methods: ["GET", "HEAD"],
+          },
+          "password.update": { uri: "settings\/password", methods: ["PUT"] },
+          appearance: { uri: "settings\/appearance", methods: ["GET", "HEAD"] },
+          "invoices.index": { uri: "invoices", methods: ["GET", "HEAD"] },
+          "invoices.show": {
+            uri: "invoices\/{invoice}",
+            methods: ["GET", "HEAD"],
+            parameters: ["invoice"],
+          },
+          "invoices.payment": {
+            uri: "invoices\/{invoice}\/payment",
+            methods: ["GET", "HEAD"],
+            parameters: ["invoice"],
+          },
+          "invoices.status": {
+            uri: "invoices\/{invoice}\/status",
+            methods: ["GET", "HEAD"],
+            parameters: ["invoice"],
+          },
+          "invoices.confirmation": {
+            uri: "invoices\/{invoice}\/confirmation",
+            methods: ["GET", "HEAD"],
+            parameters: ["invoice"],
+          },
+          "invoices.uploadReceipt": {
+            uri: "invoices\/{invoice}\/confirmation",
+            methods: ["POST"],
+            parameters: ["invoice"],
+          },
+          "invoices.changePaymentMethod": {
+            uri: "invoices\/{invoice}\/change-payment-method",
+            methods: ["POST"],
+            parameters: ["invoice"],
+          },
+          "transactions.index": {
+            uri: "transactions",
+            methods: ["GET", "HEAD"],
+          },
+          "transactions.status": {
+            uri: "transactions\/status",
+            methods: ["PATCH"],
+          },
+          "transactions.paymentStatus": {
+            uri: "transactions\/payment-status",
+            methods: ["PATCH"],
+          },
+          "users.index": { uri: "users", methods: ["GET", "HEAD"] },
+          "users.store": { uri: "users", methods: ["POST"] },
+          "users.update": {
+            uri: "users\/{user}",
+            methods: ["PUT"],
+            parameters: ["user"],
+          },
+          "users.roles.index": {
+            uri: "users\/roles",
+            methods: ["GET", "HEAD"],
+          },
+          "users.roles.store": { uri: "users\/roles", methods: ["POST"] },
+          "users.roles.update": {
+            uri: "users\/roles\/{role}",
+            methods: ["PUT"],
+            parameters: ["role"],
+          },
+          "users.permissions.index": {
+            uri: "users\/permissions",
+            methods: ["GET", "HEAD"],
+          },
+          "users.permissions.store": {
+            uri: "users\/permissions",
+            methods: ["POST"],
+          },
+          "guests.searchGuestGroups": {
+            uri: "guests\/{website}",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "guests.store": {
+            uri: "guests\/{website}",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "guests.updateGroupEvent": {
+            uri: "guests\/{website}\/group-event",
+            methods: ["PUT"],
+            parameters: ["website"],
+          },
+          "guests.updateInvitationSent": {
+            uri: "guests\/{website}\/invitation-sent",
+            methods: ["PUT"],
+            parameters: ["website"],
+          },
+          "guests.update": {
+            uri: "guests\/{website}\/{guestGroup}",
+            methods: ["PUT"],
+            parameters: ["website", "guestGroup"],
+          },
+          "guests.share": {
+            uri: "guests\/{website}\/share",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "guests.bulkDelete": {
+            uri: "guests\/{website}\/bulk-delete",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "events.store": {
+            uri: "events\/{website}",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "events.bulkDelete": {
+            uri: "events\/{website}\/bulk-delete",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "events.update": {
+            uri: "events\/{website}\/{event}",
+            methods: ["PUT"],
+            parameters: ["website", "event"],
+          },
+          "rsvp.groups.search": {
+            uri: "rsvp\/search-groups\/{website}",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "rsvp.groups.events": {
+            uri: "rsvp\/events\/{website}\/{guestGroup}",
+            methods: ["GET", "HEAD"],
+            parameters: ["website", "guestGroup"],
+          },
+          "rsvp.groups.confirm": {
+            uri: "rsvp\/confirm\/{website}",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "website-comments.updateCommentApproval": {
+            uri: "website-comments\/{website}\/approval",
+            methods: ["PUT"],
+            parameters: ["website"],
+          },
+          "website-comments.store": {
+            uri: "website-comments\/{website}",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "website-comments.bulkDelete": {
+            uri: "website-comments\/{website}\/bulk-delete",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "website-comments.update": {
+            uri: "website-comments\/{website}\/{websiteComment}",
+            methods: ["PUT"],
+            parameters: ["website", "websiteComment"],
+          },
+          "website-comments.destroy": {
+            uri: "website-comments\/{website}\/{websiteComment}",
+            methods: ["DELETE"],
+            parameters: ["website", "websiteComment"],
+          },
+          "websites.slug.unlock": {
+            uri: "websites\/unlock",
+            methods: ["POST"],
+          },
+          "websites.slug.show": {
+            uri: "inv\/{website}",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "projects.index": { uri: "projects", methods: ["GET", "HEAD"] },
+          "projects.edit": {
+            uri: "projects\/{project}",
+            methods: ["GET", "HEAD"],
+            parameters: ["project"],
+            bindings: { project: "id" },
+          },
+          "projects.show": {
+            uri: "projects\/{project}\/show",
+            methods: ["GET", "HEAD"],
+            parameters: ["project"],
+            bindings: { project: "id" },
+          },
+          "websites.preview": {
+            uri: "websites\/preview\/{website}",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "websites.design": {
+            uri: "websites\/{website}\/design",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "websites.share": {
+            uri: "websites\/{website}\/share",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "websites.rsvp": {
+            uri: "websites\/{website}\/rsvp",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "websites.comments": {
+            uri: "websites\/{website}\/comments",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "websites.settings": {
+            uri: "websites\/{website}\/settings",
+            methods: ["GET", "HEAD"],
+            parameters: ["website"],
+          },
+          "websites.upload-featured-image": {
+            uri: "websites\/featured-image\/{website}",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "websites.upload-asset": {
+            uri: "websites\/upload-asset\/{website}",
+            methods: ["POST"],
+            parameters: ["website"],
+          },
+          "websites.update": {
+            uri: "websites\/{website}",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-design": {
+            uri: "websites\/{website}\/design",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-share-preview": {
+            uri: "websites\/{website}\/share-preview",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-message-template": {
+            uri: "websites\/{website}\/message-template",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-qr-code": {
+            uri: "websites\/{website}\/qr-code",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-music": {
+            uri: "websites\/{website}\/music",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-notification": {
+            uri: "websites\/{website}\/notification",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-behavior": {
+            uri: "websites\/{website}\/behavior",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-access": {
+            uri: "websites\/{website}\/access",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "websites.update-status": {
+            uri: "websites\/{website}\/status",
+            methods: ["PATCH"],
+            parameters: ["website"],
+          },
+          "libraries.index": { uri: "libraries", methods: ["GET", "HEAD"] },
+          "libraries.store": { uri: "libraries", methods: ["POST"] },
+          "libraries.bulkDelete": {
+            uri: "libraries\/bulk-delete",
+            methods: ["POST"],
+          },
+          blog: { uri: "blog", methods: ["GET", "HEAD"] },
+          "blog.author.index": {
+            uri: "blog\/author\/{author}",
+            methods: ["GET", "HEAD"],
+            parameters: ["author"],
+          },
+          "blog.country.index": {
+            uri: "{country}\/blog",
+            methods: ["GET", "HEAD"],
+            wheres: { country: "[a-zA-Z]{2}" },
+            parameters: ["country"],
+          },
+          "blog.country.show": {
+            uri: "{country}\/blog\/{slug}",
+            methods: ["GET", "HEAD"],
+            wheres: { country: "[a-zA-Z]{2}" },
+            parameters: ["country", "slug"],
+          },
+          "blogs.index": { uri: "blogs", methods: ["GET", "HEAD"] },
+          "blogs.create": { uri: "blogs\/create", methods: ["GET", "HEAD"] },
+          "blogs.store": { uri: "blogs", methods: ["POST"] },
+          "blogs.show": {
+            uri: "blogs\/{blog}",
+            methods: ["GET", "HEAD"],
+            parameters: ["blog"],
+          },
+          "blogs.edit": {
+            uri: "blogs\/{blog}\/edit",
+            methods: ["GET", "HEAD"],
+            parameters: ["blog"],
+          },
+          "blogs.update": {
+            uri: "blogs\/{blog}",
+            methods: ["PUT", "PATCH"],
+            parameters: ["blog"],
+          },
+          "blogs.destroy": {
+            uri: "blogs\/{blog}",
+            methods: ["DELETE"],
+            parameters: ["blog"],
+          },
+          "ai.": { uri: "ai\/generate-text", methods: ["POST"] },
+          "ai.generated::uCdYFqk2prGDDCmF": {
+            uri: "ai\/generate-section",
+            methods: ["POST"],
+          },
+          "ai.generated::d5d4kcqmiWLCTdXn": {
+            uri: "ai\/seo-analyze",
+            methods: ["POST"],
+          },
+          "storage.local": {
+            uri: "storage\/{path}",
+            methods: ["GET", "HEAD"],
+            wheres: { path: ".*" },
+            parameters: ["path"],
+          },
+        },
+      };
+      !(function (t, r) {
+        "object" == typeof exports && "undefined" != typeof module
+          ? (module.exports = r())
+          : "function" == typeof define && define.amd
+          ? define(r)
+          : ((t || self).route = r());
+      })(this, function () {
+        function t(t, r) {
+          for (var n = 0; n < r.length; n++) {
+            var e = r[n];
+            (e.enumerable = e.enumerable || !1),
+              (e.configurable = !0),
+              "value" in e && (e.writable = !0),
+              Object.defineProperty(t, u(e.key), e);
+          }
+        }
+        function r(r, n, e) {
+          return (
+            n && t(r.prototype, n),
+            e && t(r, e),
+            Object.defineProperty(r, "prototype", { writable: !1 }),
+            r
+          );
+        }
+        function n() {
+          return (
+            (n = Object.assign
+              ? Object.assign.bind()
+              : function (t) {
+                  for (var r = 1; r < arguments.length; r++) {
+                    var n = arguments[r];
+                    for (var e in n)
+                      ({}).hasOwnProperty.call(n, e) && (t[e] = n[e]);
+                  }
+                  return t;
+                }),
+            n.apply(null, arguments)
+          );
+        }
+        function e(t) {
+          return (
+            (e = Object.setPrototypeOf
+              ? Object.getPrototypeOf.bind()
+              : function (t) {
+                  return t.__proto__ || Object.getPrototypeOf(t);
+                }),
+            e(t)
+          );
+        }
+        function o() {
+          try {
+            var t = !Boolean.prototype.valueOf.call(
+              Reflect.construct(Boolean, [], function () {})
+            );
+          } catch (t) {}
+          return (o = function () {
+            return !!t;
+          })();
+        }
+        function i(t, r) {
+          return (
+            (i = Object.setPrototypeOf
+              ? Object.setPrototypeOf.bind()
+              : function (t, r) {
+                  return (t.__proto__ = r), t;
+                }),
+            i(t, r)
+          );
+        }
+        function u(t) {
+          var r = (function (t) {
+            if ("object" != typeof t || !t) return t;
+            var r = t[Symbol.toPrimitive];
+            if (void 0 !== r) {
+              var n = r.call(t, "string");
+              if ("object" != typeof n) return n;
+              throw new TypeError(
+                "@@toPrimitive must return a primitive value."
+              );
+            }
+            return String(t);
+          })(t);
+          return "symbol" == typeof r ? r : r + "";
+        }
+        function f(t) {
+          var r = "function" == typeof Map ? new Map() : void 0;
+          return (
+            (f = function (t) {
+              if (
+                null === t ||
+                !(function (t) {
+                  try {
+                    return (
+                      -1 !== Function.toString.call(t).indexOf("[native code]")
+                    );
+                  } catch (r) {
+                    return "function" == typeof t;
+                  }
+                })(t)
+              )
+                return t;
+              if ("function" != typeof t)
+                throw new TypeError(
+                  "Super expression must either be null or a function"
+                );
+              if (void 0 !== r) {
+                if (r.has(t)) return r.get(t);
+                r.set(t, n);
+              }
+              function n() {
+                return (function (t, r, n) {
+                  if (o()) return Reflect.construct.apply(null, arguments);
+                  var e = [null];
+                  e.push.apply(e, r);
+                  var u = new (t.bind.apply(t, e))();
+                  return n && i(u, n.prototype), u;
+                })(t, arguments, e(this).constructor);
+              }
+              return (
+                (n.prototype = Object.create(t.prototype, {
+                  constructor: {
+                    value: n,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0,
+                  },
+                })),
+                i(n, t)
+              );
+            }),
+            f(t)
+          );
+        }
+        var a = String.prototype.replace,
+          c = /%20/g,
+          l = "RFC3986",
+          s = {
+            default: l,
+            formatters: {
+              RFC1738: function (t) {
+                return a.call(t, c, "+");
+              },
+              RFC3986: function (t) {
+                return String(t);
+              },
+            },
+            RFC1738: "RFC1738",
+            RFC3986: l,
+          },
+          v = Object.prototype.hasOwnProperty,
+          p = Array.isArray,
+          y = (function () {
+            for (var t = [], r = 0; r < 256; ++r)
+              t.push(
+                "%" + ((r < 16 ? "0" : "") + r.toString(16)).toUpperCase()
+              );
+            return t;
+          })(),
+          d = function (t, r) {
+            for (
+              var n = r && r.plainObjects ? Object.create(null) : {}, e = 0;
+              e < t.length;
+              ++e
+            )
+              void 0 !== t[e] && (n[e] = t[e]);
+            return n;
+          },
+          b = {
+            arrayToObject: d,
+            assign: function (t, r) {
+              return Object.keys(r).reduce(function (t, n) {
+                return (t[n] = r[n]), t;
+              }, t);
+            },
+            combine: function (t, r) {
+              return [].concat(t, r);
+            },
+            compact: function (t) {
+              for (
+                var r = [{ obj: { o: t }, prop: "o" }], n = [], e = 0;
+                e < r.length;
+                ++e
+              )
+                for (
+                  var o = r[e], i = o.obj[o.prop], u = Object.keys(i), f = 0;
+                  f < u.length;
+                  ++f
+                ) {
+                  var a = u[f],
+                    c = i[a];
+                  "object" == typeof c &&
+                    null !== c &&
+                    -1 === n.indexOf(c) &&
+                    (r.push({ obj: i, prop: a }), n.push(c));
+                }
+              return (
+                (function (t) {
+                  for (; t.length > 1; ) {
+                    var r = t.pop(),
+                      n = r.obj[r.prop];
+                    if (p(n)) {
+                      for (var e = [], o = 0; o < n.length; ++o)
+                        void 0 !== n[o] && e.push(n[o]);
+                      r.obj[r.prop] = e;
+                    }
+                  }
+                })(r),
+                t
+              );
+            },
+            decode: function (t, r, n) {
+              var e = t.replace(/\+/g, " ");
+              if ("iso-8859-1" === n)
+                return e.replace(/%[0-9a-f]{2}/gi, unescape);
+              try {
+                return decodeURIComponent(e);
+              } catch (t) {
+                return e;
+              }
+            },
+            encode: function (t, r, n, e, o) {
+              if (0 === t.length) return t;
+              var i = t;
+              if (
+                ("symbol" == typeof t
+                  ? (i = Symbol.prototype.toString.call(t))
+                  : "string" != typeof t && (i = String(t)),
+                "iso-8859-1" === n)
+              )
+                return escape(i).replace(/%u[0-9a-f]{4}/gi, function (t) {
+                  return "%26%23" + parseInt(t.slice(2), 16) + "%3B";
+                });
+              for (var u = "", f = 0; f < i.length; ++f) {
+                var a = i.charCodeAt(f);
+                45 === a ||
+                46 === a ||
+                95 === a ||
+                126 === a ||
+                (a >= 48 && a <= 57) ||
+                (a >= 65 && a <= 90) ||
+                (a >= 97 && a <= 122) ||
+                (o === s.RFC1738 && (40 === a || 41 === a))
+                  ? (u += i.charAt(f))
+                  : a < 128
+                  ? (u += y[a])
+                  : a < 2048
+                  ? (u += y[192 | (a >> 6)] + y[128 | (63 & a)])
+                  : a < 55296 || a >= 57344
+                  ? (u +=
+                      y[224 | (a >> 12)] +
+                      y[128 | ((a >> 6) & 63)] +
+                      y[128 | (63 & a)])
+                  : ((a =
+                      65536 +
+                      (((1023 & a) << 10) | (1023 & i.charCodeAt((f += 1))))),
+                    (u +=
+                      y[240 | (a >> 18)] +
+                      y[128 | ((a >> 12) & 63)] +
+                      y[128 | ((a >> 6) & 63)] +
+                      y[128 | (63 & a)]));
+              }
+              return u;
+            },
+            isBuffer: function (t) {
+              return !(
+                !t ||
+                "object" != typeof t ||
+                !(
+                  t.constructor &&
+                  t.constructor.isBuffer &&
+                  t.constructor.isBuffer(t)
+                )
+              );
+            },
+            isRegExp: function (t) {
+              return "[object RegExp]" === Object.prototype.toString.call(t);
+            },
+            maybeMap: function (t, r) {
+              if (p(t)) {
+                for (var n = [], e = 0; e < t.length; e += 1) n.push(r(t[e]));
+                return n;
+              }
+              return r(t);
+            },
+            merge: function t(r, n, e) {
+              if (!n) return r;
+              if ("object" != typeof n) {
+                if (p(r)) r.push(n);
+                else {
+                  if (!r || "object" != typeof r) return [r, n];
+                  ((e && (e.plainObjects || e.allowPrototypes)) ||
+                    !v.call(Object.prototype, n)) &&
+                    (r[n] = !0);
+                }
+                return r;
+              }
+              if (!r || "object" != typeof r) return [r].concat(n);
+              var o = r;
+              return (
+                p(r) && !p(n) && (o = d(r, e)),
+                p(r) && p(n)
+                  ? (n.forEach(function (n, o) {
+                      if (v.call(r, o)) {
+                        var i = r[o];
+                        i && "object" == typeof i && n && "object" == typeof n
+                          ? (r[o] = t(i, n, e))
+                          : r.push(n);
+                      } else r[o] = n;
+                    }),
+                    r)
+                  : Object.keys(n).reduce(function (r, o) {
+                      var i = n[o];
+                      return (r[o] = v.call(r, o) ? t(r[o], i, e) : i), r;
+                    }, o)
+              );
+            },
+          },
+          h = Object.prototype.hasOwnProperty,
+          g = {
+            brackets: function (t) {
+              return t + "[]";
+            },
+            comma: "comma",
+            indices: function (t, r) {
+              return t + "[" + r + "]";
+            },
+            repeat: function (t) {
+              return t;
+            },
+          },
+          m = Array.isArray,
+          j = String.prototype.split,
+          w = Array.prototype.push,
+          O = function (t, r) {
+            w.apply(t, m(r) ? r : [r]);
+          },
+          E = Date.prototype.toISOString,
+          R = s.default,
+          S = {
+            addQueryPrefix: !1,
+            allowDots: !1,
+            charset: "utf-8",
+            charsetSentinel: !1,
+            delimiter: "&",
+            encode: !0,
+            encoder: b.encode,
+            encodeValuesOnly: !1,
+            format: R,
+            formatter: s.formatters[R],
+            indices: !1,
+            serializeDate: function (t) {
+              return E.call(t);
+            },
+            skipNulls: !1,
+            strictNullHandling: !1,
+          },
+          k = function t(r, n, e, o, i, u, f, a, c, l, s, v, p, y) {
+            var d,
+              h = r;
+            if (
+              ("function" == typeof f
+                ? (h = f(n, h))
+                : h instanceof Date
+                ? (h = l(h))
+                : "comma" === e &&
+                  m(h) &&
+                  (h = b.maybeMap(h, function (t) {
+                    return t instanceof Date ? l(t) : t;
+                  })),
+              null === h)
+            ) {
+              if (o) return u && !p ? u(n, S.encoder, y, "key", s) : n;
+              h = "";
+            }
+            if (
+              "string" == typeof (d = h) ||
+              "number" == typeof d ||
+              "boolean" == typeof d ||
+              "symbol" == typeof d ||
+              "bigint" == typeof d ||
+              b.isBuffer(h)
+            ) {
+              if (u) {
+                var g = p ? n : u(n, S.encoder, y, "key", s);
+                if ("comma" === e && p) {
+                  for (
+                    var w = j.call(String(h), ","), E = "", R = 0;
+                    R < w.length;
+                    ++R
+                  )
+                    E +=
+                      (0 === R ? "" : ",") +
+                      v(u(w[R], S.encoder, y, "value", s));
+                  return [v(g) + "=" + E];
+                }
+                return [v(g) + "=" + v(u(h, S.encoder, y, "value", s))];
+              }
+              return [v(n) + "=" + v(String(h))];
+            }
+            var k,
+              T = [];
+            if (void 0 === h) return T;
+            if ("comma" === e && m(h))
+              k = [{ value: h.length > 0 ? h.join(",") || null : void 0 }];
+            else if (m(f)) k = f;
+            else {
+              var $ = Object.keys(h);
+              k = a ? $.sort(a) : $;
+            }
+            for (var x = 0; x < k.length; ++x) {
+              var N = k[x],
+                C = "object" == typeof N && void 0 !== N.value ? N.value : h[N];
+              if (!i || null !== C) {
+                var A = m(h)
+                  ? "function" == typeof e
+                    ? e(n, N)
+                    : n
+                  : n + (c ? "." + N : "[" + N + "]");
+                O(T, t(C, A, e, o, i, u, f, a, c, l, s, v, p, y));
+              }
+            }
+            return T;
+          },
+          T = Object.prototype.hasOwnProperty,
+          $ = Array.isArray,
+          x = {
+            allowDots: !1,
+            allowPrototypes: !1,
+            arrayLimit: 20,
+            charset: "utf-8",
+            charsetSentinel: !1,
+            comma: !1,
+            decoder: b.decode,
+            delimiter: "&",
+            depth: 5,
+            ignoreQueryPrefix: !1,
+            interpretNumericEntities: !1,
+            parameterLimit: 1e3,
+            parseArrays: !0,
+            plainObjects: !1,
+            strictNullHandling: !1,
+          },
+          N = function (t) {
+            return t.replace(/&#(\d+);/g, function (t, r) {
+              return String.fromCharCode(parseInt(r, 10));
+            });
+          },
+          C = function (t, r) {
+            return t && "string" == typeof t && r.comma && t.indexOf(",") > -1
+              ? t.split(",")
+              : t;
+          },
+          A = function (t, r, n, e) {
+            if (t) {
+              var o = n.allowDots ? t.replace(/\.([^.[]+)/g, "[$1]") : t,
+                i = /(\[[^[\]]*])/g,
+                u = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
+                f = u ? o.slice(0, u.index) : o,
+                a = [];
+              if (f) {
+                if (
+                  !n.plainObjects &&
+                  T.call(Object.prototype, f) &&
+                  !n.allowPrototypes
+                )
+                  return;
+                a.push(f);
+              }
+              for (
+                var c = 0;
+                n.depth > 0 && null !== (u = i.exec(o)) && c < n.depth;
+
+              ) {
+                if (
+                  ((c += 1),
+                  !n.plainObjects &&
+                    T.call(Object.prototype, u[1].slice(1, -1)) &&
+                    !n.allowPrototypes)
+                )
+                  return;
+                a.push(u[1]);
+              }
+              return (
+                u && a.push("[" + o.slice(u.index) + "]"),
+                (function (t, r, n, e) {
+                  for (var o = e ? r : C(r, n), i = t.length - 1; i >= 0; --i) {
+                    var u,
+                      f = t[i];
+                    if ("[]" === f && n.parseArrays) u = [].concat(o);
+                    else {
+                      u = n.plainObjects ? Object.create(null) : {};
+                      var a =
+                          "[" === f.charAt(0) && "]" === f.charAt(f.length - 1)
+                            ? f.slice(1, -1)
+                            : f,
+                        c = parseInt(a, 10);
+                      n.parseArrays || "" !== a
+                        ? !isNaN(c) &&
+                          f !== a &&
+                          String(c) === a &&
+                          c >= 0 &&
+                          n.parseArrays &&
+                          c <= n.arrayLimit
+                          ? ((u = [])[c] = o)
+                          : "__proto__" !== a && (u[a] = o)
+                        : (u = { 0: o });
+                    }
+                    o = u;
+                  }
+                  return o;
+                })(a, r, n, e)
+              );
+            }
+          },
+          D = function (t, r) {
+            var n = (function (t) {
+              if (!t) return x;
+              if (null != t.decoder && "function" != typeof t.decoder)
+                throw new TypeError("Decoder has to be a function.");
+              if (
+                void 0 !== t.charset &&
+                "utf-8" !== t.charset &&
+                "iso-8859-1" !== t.charset
+              )
+                throw new TypeError(
+                  "The charset option must be either utf-8, iso-8859-1, or undefined"
+                );
+              return {
+                allowDots: void 0 === t.allowDots ? x.allowDots : !!t.allowDots,
+                allowPrototypes:
+                  "boolean" == typeof t.allowPrototypes
+                    ? t.allowPrototypes
+                    : x.allowPrototypes,
+                arrayLimit:
+                  "number" == typeof t.arrayLimit ? t.arrayLimit : x.arrayLimit,
+                charset: void 0 === t.charset ? x.charset : t.charset,
+                charsetSentinel:
+                  "boolean" == typeof t.charsetSentinel
+                    ? t.charsetSentinel
+                    : x.charsetSentinel,
+                comma: "boolean" == typeof t.comma ? t.comma : x.comma,
+                decoder: "function" == typeof t.decoder ? t.decoder : x.decoder,
+                delimiter:
+                  "string" == typeof t.delimiter || b.isRegExp(t.delimiter)
+                    ? t.delimiter
+                    : x.delimiter,
+                depth:
+                  "number" == typeof t.depth || !1 === t.depth
+                    ? +t.depth
+                    : x.depth,
+                ignoreQueryPrefix: !0 === t.ignoreQueryPrefix,
+                interpretNumericEntities:
+                  "boolean" == typeof t.interpretNumericEntities
+                    ? t.interpretNumericEntities
+                    : x.interpretNumericEntities,
+                parameterLimit:
+                  "number" == typeof t.parameterLimit
+                    ? t.parameterLimit
+                    : x.parameterLimit,
+                parseArrays: !1 !== t.parseArrays,
+                plainObjects:
+                  "boolean" == typeof t.plainObjects
+                    ? t.plainObjects
+                    : x.plainObjects,
+                strictNullHandling:
+                  "boolean" == typeof t.strictNullHandling
+                    ? t.strictNullHandling
+                    : x.strictNullHandling,
+              };
+            })(r);
+            if ("" === t || null == t)
+              return n.plainObjects ? Object.create(null) : {};
+            for (
+              var e =
+                  "string" == typeof t
+                    ? (function (t, r) {
+                        var n,
+                          e = {},
+                          o = (
+                            r.ignoreQueryPrefix ? t.replace(/^\?/, "") : t
+                          ).split(
+                            r.delimiter,
+                            Infinity === r.parameterLimit
+                              ? void 0
+                              : r.parameterLimit
+                          ),
+                          i = -1,
+                          u = r.charset;
+                        if (r.charsetSentinel)
+                          for (n = 0; n < o.length; ++n)
+                            0 === o[n].indexOf("utf8=") &&
+                              ("utf8=%E2%9C%93" === o[n]
+                                ? (u = "utf-8")
+                                : "utf8=%26%2310003%3B" === o[n] &&
+                                  (u = "iso-8859-1"),
+                              (i = n),
+                              (n = o.length));
+                        for (n = 0; n < o.length; ++n)
+                          if (n !== i) {
+                            var f,
+                              a,
+                              c = o[n],
+                              l = c.indexOf("]="),
+                              s = -1 === l ? c.indexOf("=") : l + 1;
+                            -1 === s
+                              ? ((f = r.decoder(c, x.decoder, u, "key")),
+                                (a = r.strictNullHandling ? null : ""))
+                              : ((f = r.decoder(
+                                  c.slice(0, s),
+                                  x.decoder,
+                                  u,
+                                  "key"
+                                )),
+                                (a = b.maybeMap(
+                                  C(c.slice(s + 1), r),
+                                  function (t) {
+                                    return r.decoder(t, x.decoder, u, "value");
+                                  }
+                                ))),
+                              a &&
+                                r.interpretNumericEntities &&
+                                "iso-8859-1" === u &&
+                                (a = N(a)),
+                              c.indexOf("[]=") > -1 && (a = $(a) ? [a] : a),
+                              (e[f] = T.call(e, f) ? b.combine(e[f], a) : a);
+                          }
+                        return e;
+                      })(t, n)
+                    : t,
+                o = n.plainObjects ? Object.create(null) : {},
+                i = Object.keys(e),
+                u = 0;
+              u < i.length;
+              ++u
+            ) {
+              var f = i[u],
+                a = A(f, e[f], n, "string" == typeof t);
+              o = b.merge(o, a, n);
+            }
+            return b.compact(o);
+          },
+          P = /*#__PURE__*/ (function () {
+            function t(t, r, n) {
+              var e, o;
+              (this.name = t),
+                (this.definition = r),
+                (this.bindings = null != (e = r.bindings) ? e : {}),
+                (this.wheres = null != (o = r.wheres) ? o : {}),
+                (this.config = n);
+            }
+            var n = t.prototype;
+            return (
+              (n.matchesUrl = function (t) {
+                var r,
+                  n = this;
+                if (!this.definition.methods.includes("GET")) return !1;
+                var e = this.template
+                    .replace(/[.*+$()[\]]/g, "\\$&")
+                    .replace(/(\/?){([^}?]*)(\??)}/g, function (t, r, e, o) {
+                      var i,
+                        u =
+                          "(?<" +
+                          e +
+                          ">" +
+                          ((null == (i = n.wheres[e])
+                            ? void 0
+                            : i.replace(/(^\^)|(\$$)/g, "")) || "[^/?]+") +
+                          ")";
+                      return o ? "(" + r + u + ")?" : "" + r + u;
+                    })
+                    .replace(/^\w+:\/\//, ""),
+                  o = t.replace(/^\w+:\/\//, "").split("?"),
+                  i = o[0],
+                  u = o[1],
+                  f =
+                    null != (r = new RegExp("^" + e + "/?$").exec(i))
+                      ? r
+                      : new RegExp("^" + e + "/?$").exec(decodeURI(i));
+                if (f) {
+                  for (var a in f.groups)
+                    f.groups[a] =
+                      "string" == typeof f.groups[a]
+                        ? decodeURIComponent(f.groups[a])
+                        : f.groups[a];
+                  return { params: f.groups, query: D(u) };
+                }
+                return !1;
+              }),
+              (n.compile = function (t) {
+                var r = this;
+                return this.parameterSegments.length
+                  ? this.template
+                      .replace(/{([^}?]+)(\??)}/g, function (n, e, o) {
+                        var i, u;
+                        if (!o && [null, void 0].includes(t[e]))
+                          throw new Error(
+                            "Ziggy error: '" +
+                              e +
+                              "' parameter is required for route '" +
+                              r.name +
+                              "'."
+                          );
+                        if (
+                          r.wheres[e] &&
+                          !new RegExp(
+                            "^" +
+                              (o ? "(" + r.wheres[e] + ")?" : r.wheres[e]) +
+                              "$"
+                          ).test(null != (u = t[e]) ? u : "")
+                        )
+                          throw new Error(
+                            "Ziggy error: '" +
+                              e +
+                              "' parameter '" +
+                              t[e] +
+                              "' does not match required format '" +
+                              r.wheres[e] +
+                              "' for route '" +
+                              r.name +
+                              "'."
+                          );
+                        return encodeURI(null != (i = t[e]) ? i : "")
+                          .replace(/%7C/g, "|")
+                          .replace(/%25/g, "%")
+                          .replace(/\$/g, "%24");
+                      })
+                      .replace(
+                        this.config.absolute ? /(\.[^/]+?)(\/\/)/ : /(^)(\/\/)/,
+                        "$1/"
+                      )
+                      .replace(/\/+$/, "")
+                  : this.template;
+              }),
+              r(t, [
+                {
+                  key: "template",
+                  get: function () {
+                    var t = (this.origin + "/" + this.definition.uri).replace(
+                      /\/+$/,
+                      ""
+                    );
+                    return "" === t ? "/" : t;
+                  },
+                },
+                {
+                  key: "origin",
+                  get: function () {
+                    return this.config.absolute
+                      ? this.definition.domain
+                        ? "" +
+                          this.config.url.match(/^\w+:\/\//)[0] +
+                          this.definition.domain +
+                          (this.config.port ? ":" + this.config.port : "")
+                        : this.config.url
+                      : "";
+                  },
+                },
+                {
+                  key: "parameterSegments",
+                  get: function () {
+                    var t, r;
+                    return null !=
+                      (t =
+                        null == (r = this.template.match(/{[^}?]+\??}/g))
+                          ? void 0
+                          : r.map(function (t) {
+                              return {
+                                name: t.replace(/{|\??}/g, ""),
+                                required: !/\?}$/.test(t),
+                              };
+                            }))
+                      ? t
+                      : [];
+                  },
+                },
+              ])
+            );
+          })(),
+          F = /*#__PURE__*/ (function (t) {
+            function e(r, e, o, i) {
+              var u;
+              if (
+                (void 0 === o && (o = !0),
+                ((u = t.call(this) || this).t =
+                  null != i
+                    ? i
+                    : "undefined" != typeof Ziggy
+                    ? Ziggy
+                    : null == globalThis
+                    ? void 0
+                    : globalThis.Ziggy),
+                (u.t = n({}, u.t, { absolute: o })),
+                r)
+              ) {
+                if (!u.t.routes[r])
+                  throw new Error(
+                    "Ziggy error: route '" + r + "' is not in the route list."
+                  );
+                (u.i = new P(r, u.t.routes[r], u.t)), (u.u = u.l(e));
+              }
+              return u;
+            }
+            var o, u;
+            (u = t),
+              ((o = e).prototype = Object.create(u.prototype)),
+              (o.prototype.constructor = o),
+              i(o, u);
+            var f = e.prototype;
+            return (
+              (f.toString = function () {
+                var t = this,
+                  r = Object.keys(this.u)
+                    .filter(function (r) {
+                      return !t.i.parameterSegments.some(function (t) {
+                        return t.name === r;
+                      });
+                    })
+                    .filter(function (t) {
+                      return "_query" !== t;
+                    })
+                    .reduce(function (r, e) {
+                      var o;
+                      return n({}, r, (((o = {})[e] = t.u[e]), o));
+                    }, {});
+                return (
+                  this.i.compile(this.u) +
+                  (function (t, r) {
+                    var n,
+                      e = t,
+                      o = (function (t) {
+                        if (!t) return S;
+                        if (null != t.encoder && "function" != typeof t.encoder)
+                          throw new TypeError("Encoder has to be a function.");
+                        var r = t.charset || S.charset;
+                        if (
+                          void 0 !== t.charset &&
+                          "utf-8" !== t.charset &&
+                          "iso-8859-1" !== t.charset
+                        )
+                          throw new TypeError(
+                            "The charset option must be either utf-8, iso-8859-1, or undefined"
+                          );
+                        var n = s.default;
+                        if (void 0 !== t.format) {
+                          if (!h.call(s.formatters, t.format))
+                            throw new TypeError(
+                              "Unknown format option provided."
+                            );
+                          n = t.format;
+                        }
+                        var e = s.formatters[n],
+                          o = S.filter;
+                        return (
+                          ("function" == typeof t.filter || m(t.filter)) &&
+                            (o = t.filter),
+                          {
+                            addQueryPrefix:
+                              "boolean" == typeof t.addQueryPrefix
+                                ? t.addQueryPrefix
+                                : S.addQueryPrefix,
+                            allowDots:
+                              void 0 === t.allowDots
+                                ? S.allowDots
+                                : !!t.allowDots,
+                            charset: r,
+                            charsetSentinel:
+                              "boolean" == typeof t.charsetSentinel
+                                ? t.charsetSentinel
+                                : S.charsetSentinel,
+                            delimiter:
+                              void 0 === t.delimiter
+                                ? S.delimiter
+                                : t.delimiter,
+                            encode:
+                              "boolean" == typeof t.encode
+                                ? t.encode
+                                : S.encode,
+                            encoder:
+                              "function" == typeof t.encoder
+                                ? t.encoder
+                                : S.encoder,
+                            encodeValuesOnly:
+                              "boolean" == typeof t.encodeValuesOnly
+                                ? t.encodeValuesOnly
+                                : S.encodeValuesOnly,
+                            filter: o,
+                            format: n,
+                            formatter: e,
+                            serializeDate:
+                              "function" == typeof t.serializeDate
+                                ? t.serializeDate
+                                : S.serializeDate,
+                            skipNulls:
+                              "boolean" == typeof t.skipNulls
+                                ? t.skipNulls
+                                : S.skipNulls,
+                            sort: "function" == typeof t.sort ? t.sort : null,
+                            strictNullHandling:
+                              "boolean" == typeof t.strictNullHandling
+                                ? t.strictNullHandling
+                                : S.strictNullHandling,
+                          }
+                        );
+                      })(r);
+                    "function" == typeof o.filter
+                      ? (e = (0, o.filter)("", e))
+                      : m(o.filter) && (n = o.filter);
+                    var i = [];
+                    if ("object" != typeof e || null === e) return "";
+                    var u =
+                      g[
+                        r && r.arrayFormat in g
+                          ? r.arrayFormat
+                          : r && "indices" in r
+                          ? r.indices
+                            ? "indices"
+                            : "repeat"
+                          : "indices"
+                      ];
+                    n || (n = Object.keys(e)), o.sort && n.sort(o.sort);
+                    for (var f = 0; f < n.length; ++f) {
+                      var a = n[f];
+                      (o.skipNulls && null === e[a]) ||
+                        O(
+                          i,
+                          k(
+                            e[a],
+                            a,
+                            u,
+                            o.strictNullHandling,
+                            o.skipNulls,
+                            o.encode ? o.encoder : null,
+                            o.filter,
+                            o.sort,
+                            o.allowDots,
+                            o.serializeDate,
+                            o.format,
+                            o.formatter,
+                            o.encodeValuesOnly,
+                            o.charset
+                          )
+                        );
+                    }
+                    var c = i.join(o.delimiter),
+                      l = !0 === o.addQueryPrefix ? "?" : "";
+                    return (
+                      o.charsetSentinel &&
+                        (l +=
+                          "iso-8859-1" === o.charset
+                            ? "utf8=%26%2310003%3B&"
+                            : "utf8=%E2%9C%93&"),
+                      c.length > 0 ? l + c : ""
+                    );
+                  })(n({}, r, this.u._query), {
+                    addQueryPrefix: !0,
+                    arrayFormat: "indices",
+                    encodeValuesOnly: !0,
+                    skipNulls: !0,
+                    encoder: function (t, r) {
+                      return "boolean" == typeof t ? Number(t) : r(t);
+                    },
+                  })
+                );
+              }),
+              (f.v = function (t) {
+                var r = this;
+                t
+                  ? this.t.absolute &&
+                    t.startsWith("/") &&
+                    (t = this.p().host + t)
+                  : (t = this.h());
+                var e = {},
+                  o = Object.entries(this.t.routes).find(function (n) {
+                    return (e = new P(n[0], n[1], r.t).matchesUrl(t));
+                  }) || [void 0, void 0];
+                return n({ name: o[0] }, e, { route: o[1] });
+              }),
+              (f.h = function () {
+                var t = this.p(),
+                  r = t.pathname,
+                  n = t.search;
+                return (
+                  (this.t.absolute
+                    ? t.host + r
+                    : r
+                        .replace(this.t.url.replace(/^\w*:\/\/[^/]+/, ""), "")
+                        .replace(/^\/+/, "/")) + n
+                );
+              }),
+              (f.current = function (t, r) {
+                var e = this.v(),
+                  o = e.name,
+                  i = e.params,
+                  u = e.query,
+                  f = e.route;
+                if (!t) return o;
+                var a = new RegExp(
+                  "^" + t.replace(/\./g, "\\.").replace(/\*/g, ".*") + "$"
+                ).test(o);
+                if ([null, void 0].includes(r) || !a) return a;
+                var c = new P(o, f, this.t);
+                r = this.l(r, c);
+                var l = n({}, i, u);
+                if (
+                  Object.values(r).every(function (t) {
+                    return !t;
+                  }) &&
+                  !Object.values(l).some(function (t) {
+                    return void 0 !== t;
+                  })
+                )
+                  return !0;
+                var s = function (t, r) {
+                  return Object.entries(t).every(function (t) {
+                    var n = t[0],
+                      e = t[1];
+                    return Array.isArray(e) && Array.isArray(r[n])
+                      ? e.every(function (t) {
+                          return r[n].includes(t);
+                        })
+                      : "object" == typeof e &&
+                        "object" == typeof r[n] &&
+                        null !== e &&
+                        null !== r[n]
+                      ? s(e, r[n])
+                      : r[n] == e;
+                  });
+                };
+                return s(r, l);
+              }),
+              (f.p = function () {
+                var t,
+                  r,
+                  n,
+                  e,
+                  o,
+                  i,
+                  u = "undefined" != typeof window ? window.location : {},
+                  f = u.host,
+                  a = u.pathname,
+                  c = u.search;
+                return {
+                  host:
+                    null !=
+                    (t = null == (r = this.t.location) ? void 0 : r.host)
+                      ? t
+                      : void 0 === f
+                      ? ""
+                      : f,
+                  pathname:
+                    null !=
+                    (n = null == (e = this.t.location) ? void 0 : e.pathname)
+                      ? n
+                      : void 0 === a
+                      ? ""
+                      : a,
+                  search:
+                    null !=
+                    (o = null == (i = this.t.location) ? void 0 : i.search)
+                      ? o
+                      : void 0 === c
+                      ? ""
+                      : c,
+                };
+              }),
+              (f.has = function (t) {
+                return this.t.routes.hasOwnProperty(t);
+              }),
+              (f.l = function (t, r) {
+                var e = this;
+                void 0 === t && (t = {}),
+                  void 0 === r && (r = this.i),
+                  null != t || (t = {}),
+                  (t = ["string", "number"].includes(typeof t) ? [t] : t);
+                var o = r.parameterSegments.filter(function (t) {
+                  return !e.t.defaults[t.name];
+                });
+                if (Array.isArray(t))
+                  t = t.reduce(function (t, r, e) {
+                    var i, u;
+                    return n(
+                      {},
+                      t,
+                      o[e]
+                        ? (((i = {})[o[e].name] = r), i)
+                        : "object" == typeof r
+                        ? r
+                        : (((u = {})[r] = ""), u)
+                    );
+                  }, {});
+                else if (
+                  1 === o.length &&
+                  !t[o[0].name] &&
+                  (t.hasOwnProperty(Object.values(r.bindings)[0]) ||
+                    t.hasOwnProperty("id"))
+                ) {
+                  var i;
+                  ((i = {})[o[0].name] = t), (t = i);
+                }
+                return n({}, this.m(r), this.j(t, r));
+              }),
+              (f.m = function (t) {
+                var r = this;
+                return t.parameterSegments
+                  .filter(function (t) {
+                    return r.t.defaults[t.name];
+                  })
+                  .reduce(function (t, e, o) {
+                    var i,
+                      u = e.name;
+                    return n({}, t, (((i = {})[u] = r.t.defaults[u]), i));
+                  }, {});
+              }),
+              (f.j = function (t, r) {
+                var e = r.bindings,
+                  o = r.parameterSegments;
+                return Object.entries(t).reduce(function (t, r) {
+                  var i,
+                    u,
+                    f = r[0],
+                    a = r[1];
+                  if (
+                    !a ||
+                    "object" != typeof a ||
+                    Array.isArray(a) ||
+                    !o.some(function (t) {
+                      return t.name === f;
+                    })
+                  )
+                    return n({}, t, (((u = {})[f] = a), u));
+                  if (!a.hasOwnProperty(e[f])) {
+                    if (!a.hasOwnProperty("id"))
+                      throw new Error(
+                        "Ziggy error: object passed as '" +
+                          f +
+                          "' parameter is missing route model binding key '" +
+                          e[f] +
+                          "'."
+                      );
+                    e[f] = "id";
+                  }
+                  return n({}, t, (((i = {})[f] = a[e[f]]), i));
+                }, {});
+              }),
+              (f.valueOf = function () {
+                return this.toString();
+              }),
+              r(e, [
+                {
+                  key: "params",
+                  get: function () {
+                    var t = this.v();
+                    return n({}, t.params, t.query);
+                  },
+                },
+                {
+                  key: "routeParams",
+                  get: function () {
+                    return this.v().params;
+                  },
+                },
+                {
+                  key: "queryParams",
+                  get: function () {
+                    return this.v().query;
+                  },
+                },
+              ])
+            );
+          })(/*#__PURE__*/ f(String));
+        return function (t, r, n, e) {
+          var o = new F(t, r, n, e);
+          return t ? o.toString() : o;
+        };
+      });
+    </script>
+    <link
+      rel="preload"
+      as="style"
+      href="https://vitopia.co/build/assets/app-DNPUo_0k.css"
+    />
+    <link
+      rel="modulepreload"
+      href="https://vitopia.co/build/assets/app-Ft0L1MnP.js"
+    />
+    <link rel="stylesheet" href="css/assets-app-DNPUo_0k.css" />
+    <script type="module" src="js/assets-app-Ft0L1MnP.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="favicons/2714--favicon.ico"
+      inertia
+    />
+    <link rel="shortcut icon" href="favicons/9235--favicon.ico" inertia />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/2827--favicon-16x16.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/2524--favicon-32x32.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicons/5761--favicon-96x96.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicons/5926--apple-icon-57x57.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="favicons/7794--apple-icon-60x60.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicons/6576--apple-icon-72x72.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicons/9025--apple-icon-76x76.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicons/8753--apple-icon-114x114.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicons/2012--apple-icon-120x120.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicons/8840--apple-icon-144x144.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicons/9636--apple-icon-152x152.png"
+      inertia
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/5329--apple-icon-180x180.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="36x36"
+      href="favicons/4706--android-icon-36x36.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="favicons/1847--android-icon-48x48.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="72x72"
+      href="favicons/8049--android-icon-72x72.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicons/4242--android-icon-96x96.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="144x144"
+      href="favicons/9876--android-icon-144x144.png"
+      inertia
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicons/5789--android-icon-192x192.png"
+      inertia
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" inertia />
+    <meta
+      name="msapplication-TileImage"
+      content="/ms-icon-144x144.png"
+      inertia
+    />
+    <meta name="msapplication-config" content="/browserconfig.xml" inertia />
+    <link rel="manifest" href="/manifest.json" inertia />
+    <meta name="theme-color" content="#ffffff" inertia />
+    <meta
+      name="title"
+      content="Tema Undangan Digital Elegant - Ivanna"
+      inertia
+    />
+    <meta
+      name="description"
+      content="Wedding website elegan dan romantis dengan galeri foto, profil mempelai, dan kutipan cinta menyentuh."
+      inertia
+    />
+    <meta
+      name="keywords"
+      content="digital invitation, online invitation, wedding invitation, birthday invitation, event invitation, create invitations, design invitations, custom invitations, invitation maker, e-invitation"
+      inertia
+    />
+    <meta
+      itemprop="image"
+      content="https://assets.vitopia.co/templates/NHmC0zQ8NemtuwLmSEFcyVhnkV9h4sr9sYjV2BHJ.webp"
+      inertia
+    />
+    <meta property="og:type" content="website" inertia />
+    <meta
+      property="og:title"
+      content="Tema Undangan Digital Elegant - Ivanna"
+      inertia
+    />
+    <meta
+      property="og:description"
+      content="Wedding website elegan dan romantis dengan galeri foto, profil mempelai, dan kutipan cinta menyentuh."
+      inertia
+    />
+    <meta
+      property="og:image"
+      content="https://assets.vitopia.co/templates/NHmC0zQ8NemtuwLmSEFcyVhnkV9h4sr9sYjV2BHJ.webp"
+      inertia
+    />
+    <meta name="twitter:card" content="summary_large_image" inertia />
+    <meta
+      name="twitter:title"
+      content="Tema Undangan Digital Elegant - Ivanna"
+      inertia
+    />
+    <meta
+      name="twitter:description"
+      content="Wedding website elegan dan romantis dengan galeri foto, profil mempelai, dan kutipan cinta menyentuh."
+      inertia
+    />
+    <meta
+      name="twitter:image"
+      content="https://assets.vitopia.co/templates/NHmC0zQ8NemtuwLmSEFcyVhnkV9h4sr9sYjV2BHJ.webp"
+      inertia
+    />
+    <title inertia>Preview: Ivanna</title>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KTW5X5KG");
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KTW5X5KG"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "conversionsApiViewContent",
+        conversionsApiViewContentEventId:
+          "73f12a93-4f98-4ca3-b668-4cdc7cd2b787",
+        conversionsApiViewContentUrl:
+          "https:\/\/vitopia.co\/templates\/preview\/ivanna",
+        conversionsApiViewContentCurrency: "IDR",
+        conversionsApiViewContentValue: "150000.00",
+        conversionsApiViewContentContentIds: [
+          "01962493-4ee1-70ef-b04c-16a045c5d7a2",
+        ],
+        conversionsApiViewContentContentType: "product",
+      });
+    </script>
+    <div
+      id="app"
+      data-page='{"component":"templates/Preview","props":{"errors":{},"name":"Vitopia","quote":{"message":"Order your soul. Reduce your wants.","author":"Augustine"},"locale":"en","country":null,"auth":{"user":{"id":null,"name":"Guest","email":null,"email_verified_at":"2025-06-27T03:22:26.990242Z","created_at":"2025-06-27T03:22:26.990253Z","updated_at":"2025-06-27T03:22:26.990259Z"},"permissions":[]},"domain":"vitopia.co","title":"Create stunning digital invitations","meta_title":"Create stunning digital invitations","meta_description":"Design beautiful invitations for weddings, birthdays, and special events. Our platform makes it easy to craft, share and manage your digital invitations with style.","meta_keywords":"digital invitation, online invitation, wedding invitation, birthday invitation, event invitation, create invitations, design invitations, custom invitations, invitation maker, e-invitation","meta_image":"https://vitopia.co/assets/social-image.jpg","template":{"id":"01962493-4ee1-70ef-b04c-16a045c5d7a2","lang":"id","slug":"ivanna","name":"Ivanna","meta_title":"Tema Undangan Digital Elegant - Ivanna","meta_keywords":"wedding website,undangan digital pernikahan,galeri prewedding,tema pernikahan elegan,undangan digital modern,website pernikahan romantis,undangan online stylish,undangan digital full foto,ivanna wedding theme","meta_description":"Wedding website elegan dan romantis dengan galeri foto, profil mempelai, dan kutipan cinta menyentuh.","meta_image":"https://assets.vitopia.co/templates/NHmC0zQ8NemtuwLmSEFcyVhnkV9h4sr9sYjV2BHJ.webp","variable":{"layout":"split_page","header_font":"&apos;Spectral SC&apos;, serif","body_font":"&apos;Montserrat&apos;, sans-serif","accent_font":"&apos;Parisienne&apos;, cursive","header_color":"#ffffff","body_color":"#ffffff","accent_color":"#ffffff","background_color":"#121212","button_background":"#b8a975","button_color":"#000000","button_hover_background":"#b8a975","button_hover_color":"#000000","link_color":"#ffffff","link_hover_color":"#2D3748","border_color":"#E2E8F0","shadow_color":"rgba(0, 0, 0, 0.1)","content_padding":"2rem","section_spacing":"4rem"},"style":null,"sections":[{"title":"Cover","is_active":true,"body":"&lt;div class=\"size-full relative\"&gt;\n&lt;div class=\"size-full\" data-component=\"image\" data-animation=\"none\" id=\"uid-8fb3682b\"&gt;\n&lt;img src=\"https://assets.vitopia.co/libraries/images/cP0pnhvwwMMNWXIzeOvuKjY9V536qm0QXSCRZsPX.jpg\" class=\"size-full object-cover object-center\" alt=\"YVqFtGeyuPANTnFICZg3l9mes0sJ8c2n7IO5FVVC.jpg\"&gt;\n&lt;/div&gt;\n&lt;div data-animation=\"hideOnScroll\" class=\"absolute w-full flex flex-col justify-start text-white pb-20 px-6 text-center\" style=\"bottom:0;\"&gt;\n&lt;div data-component=\"text\" class=\"text-xl w-full mb-4\" data-animation=\"fadeIn\" id=\"uid-b537b436\"&gt;THE WEDDING OF&lt;/div&gt;\n    &lt;div data-component=\"text\" class=\"mb-8 text-5xl w-full font-header\" data-animation=\"fadeIn\" id=\"uid-36bc2daf\"&gt;ADAM &amp;amp; HAWA&lt;/div&gt;\n\n&lt;div class=\"rounded-lg p-3 w-full max-w-80 mx-auto\" style=\"background-color:var(--body-color);color:var(--background-color);\"&gt;\n &lt;div data-component=\"text\" data-animation=\"fadeIn\" id=\"uid-90784cf3\"&gt;Kepada Yth.&lt;/div&gt;\n&lt;div data-component=\"recipient\" class=\"font-bold\" data-animation=\"fadeIn\" id=\"uid-7e292cf9\"&gt;Tamu Undangan&lt;/div&gt;\n&lt;div data-component=\"text\" data-animation=\"fadeIn\" id=\"uid-db41d17e\"&gt;Di Tempat&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component=\"link\" data-animation=\"zoomIn\" id=\"uid-1741c32a\" class=\"mt-4 max-w-sm mx-auto\"&gt;\n&lt;a href=\"#page-0\" class=\"play-music mb-20 btn btn-primary inline-flex h-10 px-6 lg:hidden\" rel=\"noreferrer noopener\"&gt;Buka Undangan&lt;/a&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-animation=\"hideOnScroll\" class=\"absolute w-full flex justify-center text-white pb-6 lg:hidden\" style=\"bottom:0;\"&gt;\n    &lt;svg xmlns=\"http://www.w3.org/2000/svg\" width=\"48\" height=\"48\" viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"0.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;path d=\"m7 6 5 5 5-5\"&gt;&lt;/path&gt;&lt;path d=\"m7 13 5 5 5-5\"&gt;&lt;/path&gt;&lt;/svg&gt;\n&lt;/div&gt;\n","background":""},{"title":"Opening","is_active":true,"body":"&lt;section class=\"relative py-20\" style=\"height:100vh;\"&gt;\n    &lt;div class=\"absolute\" style=\"inset:0;\"&gt;\n        &lt;div id=\"uid-e836d9d0\" data-component=\"slideshow\" class=\"slideshow h-full w-full opacity-50\" data-animation=\"undefined\"&gt;&lt;img src=\"https://assets.vitopia.co/libraries/images/3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg\" class=\"active\" alt=\"3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg\"&gt;&lt;img src=\"https://assets.vitopia.co/libraries/images/PtQEwbW2lJiDyZ6smlfDHQnjgnvQOkCL6jwu9KCi.jpg\" alt=\"PtQEwbW2lJiDyZ6smlfDHQnjgnvQOkCL6jwu9KCi.jpg\"&gt;&lt;img src=\"https://assets.vitopia.co/libraries/images/yfCp7OzN9HYsYEiyyG48gUUWWzNzqm02Y7bAvX2H.jpg\" alt=\"yfCp7OzN9HYsYEiyyG48gUUWWzNzqm02Y7bAvX2H.jpg\"&gt;&lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"relative flex flex-col justify-between w-full h-full px-6\" style=\"z-index:2;\"&gt;\n      &lt;div class=\"text-center\"&gt;\n        &lt;div data-component=\"text\" data-animation=\"fadeInDown\" class=\"text-sm\" id=\"uid-bd9f3f21\"&gt;THE WEDDING OF&lt;/div&gt;\n        &lt;div data-component=\"text\" class=\"text-header font-header text-4xl md:text-5xl font-medium py-4\" data-animation=\"zoomIn\" id=\"uid-b81717f9\"&gt;ADAM &amp;amp; HAWA&lt;/div&gt;\n  \n        &lt;div data-component=\"text\" class=\"text-sm\" data-animation=\"fadeInUp\" id=\"uid-3b8ae5b9\"&gt;SABTU, 23 SEPTEMBER 2026&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"text-center\"&gt;\n        &lt;p data-component=\"description\" class=\"text-xs italic my-6\" data-animation=\"fadeInUp\" data-animation-duration=\"2\" id=\"uid-34265d89\"&gt;&ldquo;Dan di antara ayat-ayat-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu merasa nyaman kepadanya, dan dijadikan-Nya di antaramu mawadah dan rahmah. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir&rdquo;&lt;/p&gt;\n        &lt;p data-component=\"text\" class=\"text-xs\" data-animation=\"fadeInUp\" id=\"uid-d5a6d604\"&gt;Q.S. Ar-Rum: 21&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/section&gt;\n  ","background":""},{"title":"The Bride","is_active":true,"body":"&lt;section id=\"uid-404a0dd6\" class=\"relative py-20\" style=\"height:100vh;\"&gt;\n  &lt;div class=\"absolute\" style=\"inset:0;\"&gt;\n    &lt;div id=\"uid-e94d152c\" data-component=\"slideshow\" class=\"slideshow h-full w-full\" data-animation=\"undefined\"&gt;&lt;img src=\"https://assets.vitopia.co/libraries/images/9Ya4Hxol4yqBICFh7XK6eadUroz57s0a0CU1pNi6.jpg\" class=\"active\" alt=\"9Ya4Hxol4yqBICFh7XK6eadUroz57s0a0CU1pNi6.jpg\"&gt;&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div id=\"uid-c42c9177\" class=\"absolute w-full px-6 pb-20\" style=\"z-index:2;bottom:0;\"&gt;\n    &lt;div class=\"text-left\"&gt;\n      &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInLeft\" id=\"uid-a0e27009\"&gt;THE BRIDE&lt;/p&gt;\n      &lt;h2 id=\"uid-01391a44\" data-component=\"text\" class=\"text-3xl sm:text-5xl text-header font-header mb-2\" data-animation=\"fadeInLeft\"&gt;NURUL HAWA&lt;/h2&gt;\n      &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInUp\" id=\"uid-f52de2bd\"&gt;Putri Pertama dari&lt;/p&gt;\n      &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInUp\" id=\"uid-fedecb71\"&gt;Bapak Charlie Lewis&lt;/p&gt;\n      &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInUp\" id=\"uid-e8ed2d12\"&gt;&amp;amp; Ibu Kare Miller&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n","background":""},{"title":"The Groom","is_active":true,"body":"&lt;section class=\"relative py-20\" style=\"height:100vh;\"&gt;\n  &lt;div id=\"uid-cb878f15\" class=\"absolute\" style=\"inset:0;\"&gt;\n    &lt;div id=\"uid-cdf62e08\" data-component=\"slideshow\" class=\"slideshow h-full w-full\" data-animation=\"undefined\"&gt;\n      &lt;img src=\"https://assets.vitopia.co/libraries/images/dtqmKTPQZcwPQgEarVKqQrGkBdxYk7vUtlik3cbn.jpg\" class=\"active\" alt=\"dtqmKTPQZcwPQgEarVKqQrGkBdxYk7vUtlik3cbn.jpg\"&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div id=\"uid-03575d65\" class=\"absolute w-full px-6 pb-20\" style=\"z-index:2;bottom:0;\"&gt;\n    &lt;div class=\"text-left\"&gt;\n      &lt;p data-component=\"text\" class=\"text-base groom\" data-animation=\"fadeInLeft\" id=\"uid-a70b7df4\"&gt;THE GROOM&lt;/p&gt;\n      &lt;h2 id=\"uid-8049c24c\" data-component=\"text\" class=\"text-3xl sm:text-5xl text-header font-header mb-2\" data-animation=\"fadeInLeft\"&gt;IBNU ADAM&lt;/h2&gt;\n      &lt;p data-component=\"text\" class=\"text-base son\" data-animation=\"fadeInUp\" id=\"uid-c5ee1d5a\"&gt;Putra Pertama dari&lt;/p&gt;\n      &lt;p data-component=\"text\" class=\"text-base son-father\" data-animation=\"fadeInUp\" id=\"uid-42f53ed4\"&gt;\n        Bapak John Manuel Ryan\n      &lt;/p&gt;\n      &lt;p data-component=\"text\" class=\"text-base son mother\" data-animation=\"fadeInUp\" id=\"uid-a02a2c22\"&gt;\n        &amp;amp; Ibu Willa Juliette\n      &lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n","background":""},{"title":"Event","is_active":true,"body":"&lt;section id=\"uid-2a22a077\" class=\"relative py-20\"&gt;\n  &lt;div class=\"absolute\" style=\"inset:0;\"&gt;\n    &lt;div id=\"uid-13566e8b\" data-component=\"image\" class=\"image-bg h-full w-full opacity-50\" data-animation=\"undefined\"&gt;&lt;img src=\"https://assets.vitopia.co/libraries/images/3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg\" class=\"size-full object-cover\" alt=\"3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg\"&gt;&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"relative h-full w-full max-w-4xl mx-auto px-4 text-center space-y-8\" style=\"z-index:2;\"&gt;\n    &lt;div&gt;\n      &lt;h2 id=\"uid-3134abcd\" data-component=\"text\" class=\"text-header font-header text-4xl md:text-5xl font-medium\" data-animation=\"fadeInUp\"&gt;EVENT&lt;/h2&gt;\n      &lt;p data-component=\"description\" class=\"text-base mt-2\" id=\"uid-e3c31969\"&gt;\n        Hadirilah momen istimewa dalam hidup kami sesuai dengan jadwal di bawah\n        ini.\n      &lt;/p&gt;\n    &lt;/div&gt;\n\n&lt;div data-component=\"countdown\" data-datetime=\"2026-04-21T10:00\" class=\"grid grid-cols-4 gap-2\" id=\"uid-77586a42\" data-animation=\"none\"&gt;\n  &lt;div class=\"flex flex-col items-center text-center\"&gt;\n    &lt;div class=\"days text-3xl\"&gt;00&lt;/div&gt;\n    &lt;div class=\"text-sm\"&gt;Days&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"flex flex-col items-center text-center\"&gt;\n      &lt;div class=\"hours text-3xl\"&gt;00&lt;/div&gt;\n      &lt;div class=\"text-sm\"&gt;Hours&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"flex flex-col items-center text-center\"&gt;\n      &lt;div class=\"minutes text-3xl\"&gt;00&lt;/div&gt;\n      &lt;div class=\"text-sm\"&gt;Minutes&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"flex flex-col items-center text-center\"&gt;\n      &lt;div class=\"seconds text-3xl\"&gt;00&lt;/div&gt;\n      &lt;div class=\"text-sm\"&gt;Seconds&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n    &lt;div class=\"space-y-6\"&gt;\n      \n      &lt;div class=\"p-6 rounded-2xl shadow\" style=\"background-color:rgb(0 0 0 / 30%);\"&gt;\n        &lt;h3 data-component=\"text\" class=\"text-3xl sm:text-5xl text-accent font-accent mb-2\" data-animation=\"zoomIn\" id=\"uid-fc07958f\"&gt;\n          Akad Nikah\n        &lt;/h3&gt;\n        &lt;p data-component=\"text\" class=\"text-base font-bold text-xl\" data-animation=\"fadeInUp\" id=\"uid-c13dc042\"&gt;Sabtu, 12 April 2025&lt;/p&gt;\n        &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInUp\" id=\"uid-9d7940da\"&gt;Pukul 08.00 WIB&lt;/p&gt;\n        &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInUp\" id=\"uid-4d83662d\"&gt;Masjid Al-Ikhlas, Bandung&lt;/p&gt;\n        &lt;div data-component=\"link\" data-animation=\"zoomIn\" class=\"mt-4\" id=\"uid-33254750\"&gt;\n          &lt;a href=\"https://maps.google.com\" target=\"_blank\" class=\"btn btn-primary inline-flex h-10 px-6\" rel=\"noreferrer noopener\"&gt;Lokasi Acara&lt;/a&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n\n      \n      &lt;div class=\"p-6 rounded-2xl shadow\" style=\"background-color:rgb(0 0 0 / 30%);\"&gt;\n        &lt;h3 data-component=\"text\" class=\"text-3xl sm:text-5xl text-accent font-accent mb-2\" data-animation=\"zoomIn\" id=\"uid-269c2ca2\"&gt;\n          Resepsi\n        &lt;/h3&gt;\n        &lt;p data-component=\"text\" class=\"text-base font-bold text-xl\" data-animation=\"fadeInUp\" id=\"uid-5fe14761\"&gt;Sabtu, 12 April 2025&lt;/p&gt;\n        &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInUp\" id=\"uid-ba973c9d\"&gt;Pukul 11.00 - 14.00 WIB&lt;/p&gt;\n        &lt;p data-component=\"text\" class=\"text-base\" data-animation=\"fadeInUp\" id=\"uid-3a1bc477\"&gt;\n          Gedung Serbaguna Cendana, Bandung\n        &lt;/p&gt;\n        &lt;div data-component=\"link\" data-animation=\"zoomIn\" class=\"mt-4\" id=\"uid-29092c7e\"&gt;\n          &lt;a href=\"https://maps.google.com\" target=\"_blank\" class=\"btn btn-primary inline-flex h-10 px-6\" rel=\"noreferrer noopener\"&gt;Lokasi Acara&lt;/a&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;","background":""},{"title":"Gallery","is_active":true,"body":"&lt;section id=\"uid-89c75499\" class=\"px-6 py-20\"&gt;\n&lt;div class=\"text-center mb-8\"&gt;\n      &lt;h2 id=\"uid-a1ea9e00\" data-component=\"text\" class=\"text-header font-header text-4xl md:text-5xl font-medium\" data-animation=\"fadeInUp\"&gt;OUR MOMENT&lt;/h2&gt;\n      &lt;p data-component=\"description\" class=\"text-base mt-2\" id=\"uid-247cabbb\"&gt;Aku diciptakan tepat pada waktunya untuk mengisi waktumu, dan aku menggunakan seluruh waktuku dalam hidup ini untuk mencintaimu.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;div class=\"grid gap-2\"&gt;\n    \n    &lt;div id=\"uid-51ddfa8d\" class=\"w-full overflow-hidden\" data-component=\"image\" style=\"height:280px;\" data-animation=\"zoomIn\"&gt;\n      &lt;img src=\"https://assets.vitopia.co/libraries/images/cP0pnhvwwMMNWXIzeOvuKjY9V536qm0QXSCRZsPX.jpg\" alt=\"Foto 1\" class=\"w-full h-full object-cover object-center\"&gt;\n    &lt;/div&gt;\n\n    \n    &lt;div class=\"grid gap-2\" style=\"grid-template-columns:repeat(3, 1fr);\"&gt;\n      &lt;div id=\"uid-df851f8d\" class=\"overflow-hidden\" data-component=\"image\" style=\"grid-column:span 1 / span 1;height:200px;\" data-animation=\"zoomIn\"&gt;\n        &lt;img src=\"https://assets.vitopia.co/libraries/images/9Ya4Hxol4yqBICFh7XK6eadUroz57s0a0CU1pNi6.jpg\" alt=\"Foto 2\" class=\"w-full h-full object-cover object-center\"&gt;\n      &lt;/div&gt;\n      &lt;div id=\"uid-68bc136d\" class=\"overflow-hidden\" data-component=\"image\" style=\"grid-column:span 2 / span 2;height:200px;\" data-animation=\"zoomIn\"&gt;\n        &lt;img src=\"https://assets.vitopia.co/libraries/images/PtQEwbW2lJiDyZ6smlfDHQnjgnvQOkCL6jwu9KCi.jpg\" alt=\"Foto 3\" class=\"w-full h-full object-cover object-center\"&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    \n    &lt;div class=\"grid gap-2\" style=\"grid-template-columns:repeat(3, 1fr);\"&gt;\n      &lt;div id=\"uid-d2c991c5\" class=\"overflow-hidden\" data-component=\"image\" style=\"grid-column:span 2 / span 2;height:200px;\" data-animation=\"zoomIn\"&gt;\n        &lt;img src=\"https://assets.vitopia.co/libraries/images/3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg\" alt=\"Foto 4\" class=\"w-full h-full object-cover object-center\"&gt;\n      &lt;/div&gt;\n      &lt;div id=\"uid-b481325f\" class=\"overflow-hidden\" data-component=\"image\" style=\"grid-column:span 1 / span 1;height:200px;\" data-animation=\"zoomIn\"&gt;\n        &lt;img src=\"https://assets.vitopia.co/libraries/images/dtqmKTPQZcwPQgEarVKqQrGkBdxYk7vUtlik3cbn.jpg\" alt=\"Foto 5\" class=\"w-full h-full object-cover object-center\"&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    \n    &lt;div id=\"uid-b3103e34\" class=\"w-full overflow-hidden\" data-component=\"image\" style=\"height:280px;\" data-animation=\"zoomIn\"&gt;\n      &lt;img src=\"https://assets.vitopia.co/libraries/images/msXasEh8stDtUAb4yAt0hZheLWyXO4c3WSoFhgMe.jpg\" alt=\"Foto 6\" class=\"w-full h-full object-cover object-center\"&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;\n","background":""},{"title":"RSVP","is_active":true,"body":"&lt;section class=\"w-full py-20 px-4\"&gt;\n  &lt;div class=\"max-w-4xl mx-auto px-4 text-center space-y-8\"&gt;\n    &lt;div&gt;\n      &lt;h2 data-component=\"header\" class=\"text-header font-header text-5xl md:text-7xl font-medium mb-6\" data-animation=\"fadeInUp\" id=\"uid-ec01d0c4\"&gt;\n        RSVP\n      &lt;/h2&gt;\n    &lt;/div&gt;\n\n    &lt;div id=\"rsvp-form\" class=\"p-6 rounded-2xl\" style=\"background-color:rgb(255 255 255 / 9%);\"&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;","background":""},{"title":"Comment","is_active":true,"body":"&lt;section class=\"w-full py-20 px-4\"&gt;\n  &lt;div class=\"max-w-4xl mx-auto sm:px-4 text-center space-y-8\"&gt;\n    &lt;div&gt;\n      &lt;h2 data-component=\"header\" class=\"text-header font-header text-5xl md:text-7xl font-medium mb-6\" data-animation=\"fadeInUp\" id=\"uid-a3221d21\"&gt;\n        COMMENT\n      &lt;/h2&gt;\n    &lt;/div&gt;\n\n    &lt;div id=\"comment-form\" class=\"p-4 sm:p-6 rounded-2xl max-w-xl mx-auto\" style=\"background-color:rgba(255, 255, 255, .08);\"&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/section&gt;","background":""},{"title":"Gift","is_active":true,"body":"&lt;section class=\"max-w-xl mx-auto px-6 py-20 text-center space-y-8\"&gt;\n\n&lt;div class=\"mb-6\"&gt;\n      &lt;h2 data-component=\"header\" class=\"text-header font-header text-5xl md:text-7xl font-medium mb-6\" data-animation=\"fadeInUp\" id=\"uid-9f475efb\"&gt;GIFTS&lt;/h2&gt;\n&lt;p data-component=\"description\" id=\"uid-17ad2757\" data-animation=\"fadeInUp\"&gt;Terima kasih telah mengisi kebahagiaan dan kegembiraan di pernikahan kami dengan kehadiran dan hadiah indah Anda.&lt;/p&gt;\n\n&lt;div class=\"flex flex-col items-center mt-4\"&gt;\n\n&lt;div class=\"space-y-4\"&gt;\n\n&lt;div class=\"flex items-center\"&gt;\n&lt;div data-component=\"image\" class=\"h-16 w-24 overflow-hidden rounded-lg\" id=\"uid-4ebb6c01\" data-animation=\"none\"&gt;\n&lt;img src=\"https://assets.vitopia.co/websites/yOXbQgrh7fbsyYE9qziYVNOzSublplKac72GxkB8.png\" class=\"h-full w-full object-cover\" alt=\"logo-bri-1688609239.jpg\"&gt;\n&lt;/div&gt;\n&lt;div class=\"text-left pl-4\"&gt;\n&lt;h3 data-component=\"text\" class=\"font-bold\" id=\"uid-69e9c4de\" data-animation=\"none\"&gt;6872128434&lt;/h3&gt;\n&lt;p data-component=\"text\" id=\"uid-d3609091\" data-animation=\"none\"&gt;A/N Mempelai Pria&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div class=\"flex items-center\"&gt;\n&lt;div data-component=\"image\" class=\"h-16 w-24 overflow-hidden rounded-lg\" id=\"uid-90fb47de\" data-animation=\"none\"&gt;\n&lt;img src=\"https://assets.vitopia.co/websites/yOXbQgrh7fbsyYE9qziYVNOzSublplKac72GxkB8.png\" class=\"h-full w-full object-cover\" alt=\"logo-bri-1688609239.jpg\"&gt;\n&lt;/div&gt;\n&lt;div class=\"text-left pl-4\"&gt;\n&lt;h3 data-component=\"text\" class=\"font-bold\" data-animation=\"none\" id=\"uid-2e117b23\"&gt;6872128434&lt;/h3&gt;\n&lt;p data-component=\"text\" data-animation=\"none\" id=\"uid-6947ec73\"&gt;A/N Mempelai Wanita&lt;/p&gt;\n&lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/div&gt;\n\n&lt;/div&gt;\n\n    &lt;/div&gt;\n\n&lt;div data-component=\"link\" id=\"uid-74af5d5e\" data-animation=\"zoomIn\"&gt;\n&lt;a class=\"btn btn-primary inline-flex h-10 px-20\" href=\"https://wa.me/6287774074701\" target=\"_blank\" rel=\"noreferrer noopener\"&gt;Konfirmasi&lt;/a&gt;\n&lt;/div&gt;\n&lt;/section&gt;","background":""}],"settings":{"is_music_active":true,"music_title":"Autumn Sky.mp3","music_url":"https://assets.vitopia.co/libraries/audios/9LdzITV9LVKyv9yImXnnartBkwON339wadAfpY76.mp3","message_template":"Kepada Yth.\nBapak/Ibu/Saudara/i\n*[recipient_name]*\n_di tempat_\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, untuk menghadiri acara Resepsi Pernikahan Kami\n\nInfo lebih lengkap klik link dibawah ini\n[website_link]\n\nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\nKami yang berbahagia\n*Keluarga Kedua Mempelai*\n\nThis invitation valid for *[total_guests] people*\n\n`Mohon untuk konfirmasi kehadiran Anda dengan mengisi form RSVP.`"}},"edit_mode":false,"recipient_name":null,"conversionEvents":[{"event":"conversionsApiViewContent","conversionsApiViewContentEventId":"73f12a93-4f98-4ca3-b668-4cdc7cd2b787","conversionsApiViewContentUrl":"https://vitopia.co/templates/preview/ivanna","conversionsApiViewContentCurrency":"IDR","conversionsApiViewContentValue":"150000.00","conversionsApiViewContentContentIds":["01962493-4ee1-70ef-b04c-16a045c5d7a2"],"conversionsApiViewContentContentType":"product"}]},"url":"/templates/preview/ivanna","version":"6582044723bcbd0bf02bf72c4710afe3","clearHistory":false,"encryptHistory":false}'
+    >
+      <!--[--><!----><span class="hidden"></span>
+      <div class="font-body bg-[var(--background-color)]">
+        <div
+          class="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/75 text-white backdrop-blur-3xl"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-loader-icon animate-spin"
+          >
+            <path d="M12 2v4"></path>
+            <path d="m16.2 7.8 2.9-2.9"></path>
+            <path d="M18 12h4"></path>
+            <path d="m16.2 16.2 2.9 2.9"></path>
+            <path d="M12 18v4"></path>
+            <path d="m4.9 19.1 2.9-2.9"></path>
+            <path d="M2 12h4"></path>
+            <path d="m4.9 4.9 2.9 2.9"></path>
+          </svg>
+        </div>
+        <!--[--><!--[--><!--[--><!--]-->
+        <div
+          role="region"
+          aria-label="Notifications (F8)"
+          tabindex="-1"
+          style="pointer-events: none"
+        >
+          <!--[--><!---->
+          <ol
+            tabindex="-1"
+            class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"
+          >
+            <!--[--><!--]-->
+          </ol>
+          <!----><!--]-->
+        </div>
+        <!--]--><!--]-->
+        <div class="fixed right-4 top-4 z-40 lg:left-4">
+          <!--[--><!--[--><!--[--><!--[--><button
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 outline-none rounded-full"
+            id="reka-dropdown-menu-trigger-v-0"
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            data-state="closed"
+          >
+            <!--[--><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewbox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu-icon"
+            >
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line></svg
+            ><span class="hidden sm:inline">Menu</span
+            ><!--]--></button
+          ><!----><!--]--><!--]--><!--]--><!--]-->
+        </div>
+        <div
+          class="fixed inset-0 h-full lg:flex text-[var(--body-color)] transition-all duration-200 ease-in-out"
+        >
+          <div class="relative h-full grow overflow-hidden">
+            <div class="size-full relative">
+              <div
+                class="size-full"
+                data-component="image"
+                data-animation="none"
+                id="uid-8fb3682b"
+              >
+                <img
+                  src="images/images-cP0pnhvwwMMNWXIzeOvuKjY9V536qm0QXSCRZsPX.jpg"
+                  class="size-full object-cover object-center"
+                  alt="YVqFtGeyuPANTnFICZg3l9mes0sJ8c2n7IO5FVVC.jpg"
+                />
+              </div>
+              <div
+                data-animation="hideOnScroll"
+                class="absolute w-full flex flex-col justify-start text-white pb-20 px-6 text-center"
+                style="bottom: 0"
+              >
+                <div
+                  data-component="text"
+                  class="text-xl w-full mb-4"
+                  data-animation="fadeIn"
+                  id="uid-b537b436"
+                >
+                  THE WEDDING OF
+                </div>
+                <div
+                  data-component="text"
+                  class="mb-8 text-5xl w-full font-header"
+                  data-animation="fadeIn"
+                  id="uid-36bc2daf"
+                >
+                  ADAM &amp; HAWA
+                </div>
+
+                <div
+                  class="rounded-lg p-3 w-full max-w-80 mx-auto"
+                  style="
+                    background-color: var(--body-color);
+                    color: var(--background-color);
+                  "
+                >
+                  <div
+                    data-component="text"
+                    data-animation="fadeIn"
+                    id="uid-90784cf3"
+                  >
+                    Kepada Yth.
+                  </div>
+                  <div
+                    data-component="recipient"
+                    class="font-bold"
+                    data-animation="fadeIn"
+                    id="uid-7e292cf9"
+                  >
+                    Tamu Undangan
+                  </div>
+                  <div
+                    data-component="text"
+                    data-animation="fadeIn"
+                    id="uid-db41d17e"
+                  >
+                    Di Tempat
+                  </div>
+                </div>
+
+                <div
+                  data-component="link"
+                  data-animation="zoomIn"
+                  id="uid-1741c32a"
+                  class="mt-4 max-w-sm mx-auto"
+                >
+                  <a
+                    href="#page-0"
+                    class="play-music mb-20 btn btn-primary inline-flex h-10 px-6 lg:hidden"
+                    rel="noreferrer noopener"
+                    >Buka Undangan</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              data-animation="hideOnScroll"
+              class="absolute w-full flex justify-center text-white pb-6 lg:hidden"
+              style="bottom: 0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewbox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="0.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m7 6 5 5 5-5"></path>
+                <path d="m7 13 5 5 5-5"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="h-full w-full max-w-full flex-none lg:max-w-xl"></div>
+        </div>
+        <div
+          class="lg:ml-auto lg:mt-0 lg:max-w-xl rtl:lg:ml-0 rtl:lg:mr-auto relative mt-[100dvh] w-full max-w-full bg-[var(--background-color)] text-[var(--body-color)]"
+        >
+          <!--[-->
+          <div id="page-0" class="w-full">
+            <div class="relative overflow-hidden">
+              <section class="relative py-20" style="height: 100vh">
+                <div class="absolute" style="inset: 0">
+                  <div
+                    id="uid-e836d9d0"
+                    data-component="slideshow"
+                    class="slideshow h-full w-full opacity-50"
+                    data-animation="undefined"
+                  >
+                    <img
+                      src="images/images-3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg"
+                      class="active"
+                      alt="3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg"
+                    /><img
+                      src="images/images-PtQEwbW2lJiDyZ6smlfDHQnjgnvQOkCL6jwu9KCi.jpg"
+                      alt="PtQEwbW2lJiDyZ6smlfDHQnjgnvQOkCL6jwu9KCi.jpg"
+                    /><img
+                      src="images/images-yfCp7OzN9HYsYEiyyG48gUUWWzNzqm02Y7bAvX2H.jpg"
+                      alt="yfCp7OzN9HYsYEiyyG48gUUWWzNzqm02Y7bAvX2H.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="relative flex flex-col justify-between w-full h-full px-6"
+                  style="z-index: 2"
+                >
+                  <div class="text-center">
+                    <div
+                      data-component="text"
+                      data-animation="fadeInDown"
+                      class="text-sm"
+                      id="uid-bd9f3f21"
+                    >
+                      THE WEDDING OF
+                    </div>
+                    <div
+                      data-component="text"
+                      class="text-header font-header text-4xl md:text-5xl font-medium py-4"
+                      data-animation="zoomIn"
+                      id="uid-b81717f9"
+                    >
+                      ADAM &amp; HAWA
+                    </div>
+
+                    <div
+                      data-component="text"
+                      class="text-sm"
+                      data-animation="fadeInUp"
+                      id="uid-3b8ae5b9"
+                    >
+                      SABTU, 23 SEPTEMBER 2026
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <p
+                      data-component="description"
+                      class="text-xs italic my-6"
+                      data-animation="fadeInUp"
+                      data-animation-duration="2"
+                      id="uid-34265d89"
+                    >
+                      &ldquo;Dan di antara ayat-ayat-Nya ialah Dia menciptakan
+                      untukmu istri-istri dari jenismu sendiri, supaya kamu
+                      merasa nyaman kepadanya, dan dijadikan-Nya di antaramu
+                      mawadah dan rahmah. Sesungguhnya pada yang demikian itu
+                      benar-benar terdapat tanda-tanda bagi kaum yang
+                      berpikir&rdquo;
+                    </p>
+                    <p
+                      data-component="text"
+                      class="text-xs"
+                      data-animation="fadeInUp"
+                      id="uid-d5a6d604"
+                    >
+                      Q.S. Ar-Rum: 21
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="page-1" class="w-full">
+            <div class="relative overflow-hidden">
+              <section
+                id="uid-404a0dd6"
+                class="relative py-20"
+                style="height: 100vh"
+              >
+                <div class="absolute" style="inset: 0">
+                  <div
+                    id="uid-e94d152c"
+                    data-component="slideshow"
+                    class="slideshow h-full w-full"
+                    data-animation="undefined"
+                  >
+                    <img
+                      src="images/images-9Ya4Hxol4yqBICFh7XK6eadUroz57s0a0CU1pNi6.jpg"
+                      class="active"
+                      alt="9Ya4Hxol4yqBICFh7XK6eadUroz57s0a0CU1pNi6.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  id="uid-c42c9177"
+                  class="absolute w-full px-6 pb-20"
+                  style="z-index: 2; bottom: 0"
+                >
+                  <div class="text-left">
+                    <p
+                      data-component="text"
+                      class="text-base"
+                      data-animation="fadeInLeft"
+                      id="uid-a0e27009"
+                    >
+                      THE BRIDE
+                    </p>
+                    <h2
+                      id="uid-01391a44"
+                      data-component="text"
+                      class="text-3xl sm:text-5xl text-header font-header mb-2"
+                      data-animation="fadeInLeft"
+                    >
+                      NURUL HAWA
+                    </h2>
+                    <p
+                      data-component="text"
+                      class="text-base"
+                      data-animation="fadeInUp"
+                      id="uid-f52de2bd"
+                    >
+                      Putri Pertama dari
+                    </p>
+                    <p
+                      data-component="text"
+                      class="text-base"
+                      data-animation="fadeInUp"
+                      id="uid-fedecb71"
+                    >
+                      Bapak Charlie Lewis
+                    </p>
+                    <p
+                      data-component="text"
+                      class="text-base"
+                      data-animation="fadeInUp"
+                      id="uid-e8ed2d12"
+                    >
+                      &amp; Ibu Kare Miller
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="page-2" class="w-full">
+            <div class="relative overflow-hidden">
+              <section class="relative py-20" style="height: 100vh">
+                <div id="uid-cb878f15" class="absolute" style="inset: 0">
+                  <div
+                    id="uid-cdf62e08"
+                    data-component="slideshow"
+                    class="slideshow h-full w-full"
+                    data-animation="undefined"
+                  >
+                    <img
+                      src="images/images-dtqmKTPQZcwPQgEarVKqQrGkBdxYk7vUtlik3cbn.jpg"
+                      class="active"
+                      alt="dtqmKTPQZcwPQgEarVKqQrGkBdxYk7vUtlik3cbn.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  id="uid-03575d65"
+                  class="absolute w-full px-6 pb-20"
+                  style="z-index: 2; bottom: 0"
+                >
+                  <div class="text-left">
+                    <p
+                      data-component="text"
+                      class="text-base groom"
+                      data-animation="fadeInLeft"
+                      id="uid-a70b7df4"
+                    >
+                      THE GROOM
+                    </p>
+                    <h2
+                      id="uid-8049c24c"
+                      data-component="text"
+                      class="text-3xl sm:text-5xl text-header font-header mb-2"
+                      data-animation="fadeInLeft"
+                    >
+                      IBNU ADAM
+                    </h2>
+                    <p
+                      data-component="text"
+                      class="text-base son"
+                      data-animation="fadeInUp"
+                      id="uid-c5ee1d5a"
+                    >
+                      Putra Pertama dari
+                    </p>
+                    <p
+                      data-component="text"
+                      class="text-base son-father"
+                      data-animation="fadeInUp"
+                      id="uid-42f53ed4"
+                    >
+                      Bapak John Manuel Ryan
+                    </p>
+                    <p
+                      data-component="text"
+                      class="text-base son mother"
+                      data-animation="fadeInUp"
+                      id="uid-a02a2c22"
+                    >
+                      &amp; Ibu Willa Juliette
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="page-3" class="w-full">
+            <div class="relative overflow-hidden">
+              <section id="uid-2a22a077" class="relative py-20">
+                <div class="absolute" style="inset: 0">
+                  <div
+                    id="uid-13566e8b"
+                    data-component="image"
+                    class="image-bg h-full w-full opacity-50"
+                    data-animation="undefined"
+                  >
+                    <img
+                      src="images/images-3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg"
+                      class="size-full object-cover"
+                      alt="3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="relative h-full w-full max-w-4xl mx-auto px-4 text-center space-y-8"
+                  style="z-index: 2"
+                >
+                  <div>
+                    <h2
+                      id="uid-3134abcd"
+                      data-component="text"
+                      class="text-header font-header text-4xl md:text-5xl font-medium"
+                      data-animation="fadeInUp"
+                    >
+                      EVENT
+                    </h2>
+                    <p
+                      data-component="description"
+                      class="text-base mt-2"
+                      id="uid-e3c31969"
+                    >
+                      Hadirilah momen istimewa dalam hidup kami sesuai dengan
+                      jadwal di bawah ini.
+                    </p>
+                  </div>
+
+                  <div
+                    data-component="countdown"
+                    data-datetime="2026-04-21T10:00"
+                    class="grid grid-cols-4 gap-2"
+                    id="uid-77586a42"
+                    data-animation="none"
+                  >
+                    <div class="flex flex-col items-center text-center">
+                      <div class="days text-3xl">00</div>
+                      <div class="text-sm">Days</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                      <div class="hours text-3xl">00</div>
+                      <div class="text-sm">Hours</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                      <div class="minutes text-3xl">00</div>
+                      <div class="text-sm">Minutes</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                      <div class="seconds text-3xl">00</div>
+                      <div class="text-sm">Seconds</div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-6">
+                    <div
+                      class="p-6 rounded-2xl shadow"
+                      style="background-color: rgb(0 0 0 / 30%)"
+                    >
+                      <h3
+                        data-component="text"
+                        class="text-3xl sm:text-5xl text-accent font-accent mb-2"
+                        data-animation="zoomIn"
+                        id="uid-fc07958f"
+                      >
+                        Akad Nikah
+                      </h3>
+                      <p
+                        data-component="text"
+                        class="text-base font-bold text-xl"
+                        data-animation="fadeInUp"
+                        id="uid-c13dc042"
+                      >
+                        Sabtu, 12 April 2025
+                      </p>
+                      <p
+                        data-component="text"
+                        class="text-base"
+                        data-animation="fadeInUp"
+                        id="uid-9d7940da"
+                      >
+                        Pukul 08.00 WIB
+                      </p>
+                      <p
+                        data-component="text"
+                        class="text-base"
+                        data-animation="fadeInUp"
+                        id="uid-4d83662d"
+                      >
+                        Masjid Al-Ikhlas, Bandung
+                      </p>
+                      <div
+                        data-component="link"
+                        data-animation="zoomIn"
+                        class="mt-4"
+                        id="uid-33254750"
+                      >
+                        <a
+                          href="https://maps.google.com"
+                          target="_blank"
+                          class="btn btn-primary inline-flex h-10 px-6"
+                          rel="noreferrer noopener"
+                          >Lokasi Acara</a
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="p-6 rounded-2xl shadow"
+                      style="background-color: rgb(0 0 0 / 30%)"
+                    >
+                      <h3
+                        data-component="text"
+                        class="text-3xl sm:text-5xl text-accent font-accent mb-2"
+                        data-animation="zoomIn"
+                        id="uid-269c2ca2"
+                      >
+                        Resepsi
+                      </h3>
+                      <p
+                        data-component="text"
+                        class="text-base font-bold text-xl"
+                        data-animation="fadeInUp"
+                        id="uid-5fe14761"
+                      >
+                        Sabtu, 12 April 2025
+                      </p>
+                      <p
+                        data-component="text"
+                        class="text-base"
+                        data-animation="fadeInUp"
+                        id="uid-ba973c9d"
+                      >
+                        Pukul 11.00 - 14.00 WIB
+                      </p>
+                      <p
+                        data-component="text"
+                        class="text-base"
+                        data-animation="fadeInUp"
+                        id="uid-3a1bc477"
+                      >
+                        Gedung Serbaguna Cendana, Bandung
+                      </p>
+                      <div
+                        data-component="link"
+                        data-animation="zoomIn"
+                        class="mt-4"
+                        id="uid-29092c7e"
+                      >
+                        <a
+                          href="https://maps.google.com"
+                          target="_blank"
+                          class="btn btn-primary inline-flex h-10 px-6"
+                          rel="noreferrer noopener"
+                          >Lokasi Acara</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="page-4" class="w-full">
+            <div class="relative overflow-hidden">
+              <section id="uid-89c75499" class="px-6 py-20">
+                <div class="text-center mb-8">
+                  <h2
+                    id="uid-a1ea9e00"
+                    data-component="text"
+                    class="text-header font-header text-4xl md:text-5xl font-medium"
+                    data-animation="fadeInUp"
+                  >
+                    OUR MOMENT
+                  </h2>
+                  <p
+                    data-component="description"
+                    class="text-base mt-2"
+                    id="uid-247cabbb"
+                  >
+                    Aku diciptakan tepat pada waktunya untuk mengisi waktumu,
+                    dan aku menggunakan seluruh waktuku dalam hidup ini untuk
+                    mencintaimu.
+                  </p>
+                </div>
+                <div class="grid gap-2">
+                  <div
+                    id="uid-51ddfa8d"
+                    class="w-full overflow-hidden"
+                    data-component="image"
+                    style="height: 280px"
+                    data-animation="zoomIn"
+                  >
+                    <img
+                      src="images/images-cP0pnhvwwMMNWXIzeOvuKjY9V536qm0QXSCRZsPX.jpg"
+                      alt="Foto 1"
+                      class="w-full h-full object-cover object-center"
+                    />
+                  </div>
+
+                  <div
+                    class="grid gap-2"
+                    style="grid-template-columns: repeat(3, 1fr)"
+                  >
+                    <div
+                      id="uid-df851f8d"
+                      class="overflow-hidden"
+                      data-component="image"
+                      style="grid-column: span 1 / span 1; height: 200px"
+                      data-animation="zoomIn"
+                    >
+                      <img
+                        src="images/images-9Ya4Hxol4yqBICFh7XK6eadUroz57s0a0CU1pNi6.jpg"
+                        alt="Foto 2"
+                        class="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                    <div
+                      id="uid-68bc136d"
+                      class="overflow-hidden"
+                      data-component="image"
+                      style="grid-column: span 2 / span 2; height: 200px"
+                      data-animation="zoomIn"
+                    >
+                      <img
+                        src="images/images-PtQEwbW2lJiDyZ6smlfDHQnjgnvQOkCL6jwu9KCi.jpg"
+                        alt="Foto 3"
+                        class="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="grid gap-2"
+                    style="grid-template-columns: repeat(3, 1fr)"
+                  >
+                    <div
+                      id="uid-d2c991c5"
+                      class="overflow-hidden"
+                      data-component="image"
+                      style="grid-column: span 2 / span 2; height: 200px"
+                      data-animation="zoomIn"
+                    >
+                      <img
+                        src="images/images-3jPngeBChSREnsqmYDMCXkzWXEC64V7EUltNY8aB.jpg"
+                        alt="Foto 4"
+                        class="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                    <div
+                      id="uid-b481325f"
+                      class="overflow-hidden"
+                      data-component="image"
+                      style="grid-column: span 1 / span 1; height: 200px"
+                      data-animation="zoomIn"
+                    >
+                      <img
+                        src="images/images-dtqmKTPQZcwPQgEarVKqQrGkBdxYk7vUtlik3cbn.jpg"
+                        alt="Foto 5"
+                        class="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    id="uid-b3103e34"
+                    class="w-full overflow-hidden"
+                    data-component="image"
+                    style="height: 280px"
+                    data-animation="zoomIn"
+                  >
+                    <img
+                      src="images/images-msXasEh8stDtUAb4yAt0hZheLWyXO4c3WSoFhgMe.jpg"
+                      alt="Foto 6"
+                      class="w-full h-full object-cover object-center"
+                    />
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="page-5" class="w-full">
+            <div class="relative overflow-hidden">
+              <section class="w-full py-20 px-4">
+                <div class="max-w-4xl mx-auto px-4 text-center space-y-8">
+                  <div>
+                    <h2
+                      data-component="header"
+                      class="text-header font-header text-5xl md:text-7xl font-medium mb-6"
+                      data-animation="fadeInUp"
+                      id="uid-ec01d0c4"
+                    >
+                      RSVP
+                    </h2>
+                  </div>
+
+                  <div
+                    id="rsvp-form"
+                    class="p-6 rounded-2xl"
+                    style="background-color: rgb(255 255 255 / 9%)"
+                  ></div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="page-6" class="w-full">
+            <div class="relative overflow-hidden">
+              <section class="w-full py-20 px-4">
+                <div class="max-w-4xl mx-auto sm:px-4 text-center space-y-8">
+                  <div>
+                    <h2
+                      data-component="header"
+                      class="text-header font-header text-5xl md:text-7xl font-medium mb-6"
+                      data-animation="fadeInUp"
+                      id="uid-a3221d21"
+                    >
+                      COMMENT
+                    </h2>
+                  </div>
+
+                  <div
+                    id="comment-form"
+                    class="p-4 sm:p-6 rounded-2xl max-w-xl mx-auto"
+                    style="background-color: rgba(255, 255, 255, 0.08)"
+                  ></div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="page-7" class="w-full">
+            <div class="relative overflow-hidden">
+              <section
+                class="max-w-xl mx-auto px-6 py-20 text-center space-y-8"
+              >
+                <div class="mb-6">
+                  <h2
+                    data-component="header"
+                    class="text-header font-header text-5xl md:text-7xl font-medium mb-6"
+                    data-animation="fadeInUp"
+                    id="uid-9f475efb"
+                  >
+                    GIFTS
+                  </h2>
+                  <p
+                    data-component="description"
+                    id="uid-17ad2757"
+                    data-animation="fadeInUp"
+                  >
+                    Terima kasih telah mengisi kebahagiaan dan kegembiraan di
+                    pernikahan kami dengan kehadiran dan hadiah indah Anda.
+                  </p>
+
+                  <div class="flex flex-col items-center mt-4">
+                    <div class="space-y-4">
+                      <div class="flex items-center">
+                        <div
+                          data-component="image"
+                          class="h-16 w-24 overflow-hidden rounded-lg"
+                          id="uid-4ebb6c01"
+                          data-animation="none"
+                        >
+                          <img
+                            src="images/websites-yOXbQgrh7fbsyYE9qziYVNOzSublplKac72GxkB8.png"
+                            class="h-full w-full object-cover"
+                            alt="logo-bri-1688609239.jpg"
+                          />
+                        </div>
+                        <div class="text-left pl-4">
+                          <h3
+                            data-component="text"
+                            class="font-bold"
+                            id="uid-69e9c4de"
+                            data-animation="none"
+                          >
+                            6872128434
+                          </h3>
+                          <p
+                            data-component="text"
+                            id="uid-d3609091"
+                            data-animation="none"
+                          >
+                            A/N Mempelai Pria
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center">
+                        <div
+                          data-component="image"
+                          class="h-16 w-24 overflow-hidden rounded-lg"
+                          id="uid-90fb47de"
+                          data-animation="none"
+                        >
+                          <img
+                            src="images/websites-yOXbQgrh7fbsyYE9qziYVNOzSublplKac72GxkB8.png"
+                            class="h-full w-full object-cover"
+                            alt="logo-bri-1688609239.jpg"
+                          />
+                        </div>
+                        <div class="text-left pl-4">
+                          <h3
+                            data-component="text"
+                            class="font-bold"
+                            data-animation="none"
+                            id="uid-2e117b23"
+                          >
+                            6872128434
+                          </h3>
+                          <p
+                            data-component="text"
+                            data-animation="none"
+                            id="uid-6947ec73"
+                          >
+                            A/N Mempelai Wanita
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  data-component="link"
+                  id="uid-74af5d5e"
+                  data-animation="zoomIn"
+                >
+                  <a
+                    class="btn btn-primary inline-flex h-10 px-20"
+                    href="https://wa.me/6287774074701"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >Konfirmasi</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+          <!--]-->
+          <div class="border-t border-foreground/10 px-6 py-10">
+            <div class="grid gap-2">
+              <div
+                class="flex items-center justify-center"
+                data-animation="fadeInUp"
+              >
+                <div class="mr-2 font-serif italic">By</div>
+                <div class="flex items-center">
+                  <!--[-->
+                  <div
+                    class="flex aspect-square size-10 items-center justify-center rounded-b-3xl rounded-t-md bg-sidebar-primary text-sidebar-primary-foreground"
+                  >
+                    <svg
+                      viewbox="0 0 48 48"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="mb-1 size-8 fill-current"
+                    >
+                      <path
+                        d="M24.249 41.6545L11.7028 15.4217C10.5622 13.1406 7.64274 12.4694 6 12H12.8434C14.6134 12 16.6346 12.6878 17.4056 14.2811L24.249 30.2489L31.0923 14.2811C31.8632 12.6878 33.8845 12 35.6545 12H42.4244C40.7816 12.4694 37.9356 13.1406 36.7951 15.4217L24.249 41.6545Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="ml-1 grid flex-1 text-left text-sm">
+                    <span
+                      class="mb-0.5 truncate font-serif font-semibold italic"
+                      >Vitopia</span
+                    >
+                  </div>
+                  <!--]-->
+                </div>
+              </div>
+              <div
+                class="text-center font-sans text-sm font-bold"
+                data-animation="fadeInUp"
+              >
+                Create stunning digital invitations
+              </div>
+              <div
+                class="text-center font-sans text-xs"
+                data-animation="fadeInUp"
+              >
+                Design beautiful invitations for weddings, birthdays, and
+                special events. Our platform makes it easy to craft, share and
+                manage your digital invitations with style.
+              </div>
+              <a
+                href="vitopia.html"
+                target="_blank"
+                class="text-center font-sans text-sm text-[var(--body-color)] underline"
+                data-animation="fadeInUp"
+                >https://vitopia.co</a
+              >
+            </div>
+          </div>
+        </div>
+        <!----><!---->
+      </div>
+      <button
+        id="btnMusic"
+        class="fixed bottom-2 left-2 z-50 transition-transform duration-300 ease-in-out"
+        title="Autumn Sky.mp3"
+        data-v-7f0d3292
+      >
+        <div
+          class="vinyl size-12 bg-[url('/assets/images/vinyl.png')] bg-cover bg-center"
+          style="animation-duration: 20s"
+          data-v-7f0d3292
+        >
+          <span class="sr-only text-xs" data-v-7f0d3292>Music</span>
+        </div></button
+      ><a
+        href="#page-0"
+        id="personalizedBadge"
+        class="fixed bottom-0 left-[50%] z-40 flex w-64 -translate-x-1/2 items-center gap-4 rounded-t-md bg-white p-4 shadow-lg transition duration-500"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewbox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="0.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-mail-icon size-8 flex-none"
+        >
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <div class="text-sm leading-tight">
+          <h2 class="font-serif italic">Personalized for</h2>
+          <div class="font-bold">Special Guest</div>
+        </div></a
+      ><!--]-->
+    </div>
+  </body>
+</html>
