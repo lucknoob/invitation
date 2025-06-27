@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    #iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      z-index: 9999;
+    }
+  </style>
 </head>
 <body>
     
-    <iframe id="iframe" src="https://lucknoob.github.io/invitation/template/DAYSA"></iframe>
+    <iframe id="iframe" src="https://lucknoob.github.io/invitation/template/DAYSA" allowfullscreen></iframe>
 <script>
   const iframe = document.getElementById('iframe');
   iframe.onload = () => {
-    iframe.contentWindow.postMessage({user:'john',token:'abc123'}, 'https://your-embed.com');
+    iframe.contentWindow.postMessage({user:'john',token:'abc123'}, 'https://lucknoob.github.io');
   };
 </script>
 </body>

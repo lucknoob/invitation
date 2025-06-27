@@ -1881,7 +1881,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('message', e => {
     console.log('Received message from iframe:', e.data);
     console.log('Received message from iframe:', e.origin);
-    // if (e.origin !== 'https://your-parent.com') return;
+    if (e.origin !== 'https://lucknoob.github.io') return;
     const {user, token} = e.data;
     document.body.innerText = `User: ${user}, Token: ${token}`;
   });
