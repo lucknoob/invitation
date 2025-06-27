@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <iframe id="iframe" src="https://lucknoob.github.io/invitation/template/DAYSA"></iframe>
+<script>
+  const iframe = document.getElementById('iframe');
+  iframe.onload = () => {
+    iframe.contentWindow.postMessage({user:'john',token:'abc123'}, 'https://your-embed.com');
+  };
+</script>
+</body>
+</html>
